@@ -32,9 +32,14 @@ Route::get('/mainLayout', function () {
 Route::get('/index', 'HomeController@customIndex');
 Route::get('/show-machines-by', 'HomeController@showMachinesBy');
 
-//admin routes
-Route::get('/admin', 'adminController@dashboard')->middleware('adminMiddleware');
-Route::get('/newMachine', 'machineController@newMachine')->middleware('adminMiddleware');
 
 
-Route::get('/categories', 'categoriesController@index');
+Route::middleware(['auth'])->group(function () {
+
+    Route::get('/admin', 'adminController@dashboard');
+    Route::get('/newMachine', 'machineController@newMachine');
+
+    //categories
+    Route::get('/categories', 'categoriesController@index');
+    Route::post('/add-category', 'categoriesController@addCategory');
+});

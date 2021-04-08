@@ -12,6 +12,8 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+    <script src="{{ asset('js/alert.js') }}"></script>
+
     <script
         src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'>
     </script>
@@ -88,7 +90,8 @@
                         </li>
 
                         <!-- categories -->
-                        <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Categories">
+                        <li onclick="location.href='/categories'" class="c-menu__item has-submenu" data-toggle="tooltip"
+                            title="Categories">
                             <div class="c-menu__item__inner"><i class="fa fa-cogs"></i>
                                 <div class="c-menu-item__title"><span>Categories</span></div>
                             </div>
