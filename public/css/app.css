@@ -16215,7 +16215,7 @@ readers do not read off random characters that represent icons */
 }
 
 .index-container {
-  max-width: 1400px !important;
+  max-width: 1376px !important;
 }
 
 .top-machines h2 {
@@ -16293,4 +16293,17 @@ readers do not read off random characters that represent icons */
 }
 .index-parallax .btn {
   padding: 0.2rem !important;
+}
+
+.center button {
+  color: white;
+  background: #001729;
+  border: none;
+  padding: 0.25rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.center button:hover {
+  background-color: #031f42;
 }

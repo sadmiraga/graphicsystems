@@ -194,7 +194,9 @@
                 </div>
             </div>
         </div>
-        <a href=""><button class="more-offers-button">MORE OFFERS</button></a>
+        <div class="center" style="text-align: center">
+            <a href=""><button class="more-offers-button">MORE OFFERS</button></a>
+        </div>
     </div>
     <div class="index-parallax">
         <p style="margin-bottom: -0.5rem; font-size: 1.5rem;"><b>Subscribe to our Newsletter</b></p>
