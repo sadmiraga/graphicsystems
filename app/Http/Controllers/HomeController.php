@@ -40,4 +40,9 @@ class HomeController extends Controller
     {
         return view('index');
     }
+
+    public function showMachinesBy()
+    {
+        return view('showMachinesBy');
+    }
 }
