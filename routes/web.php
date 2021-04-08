@@ -30,7 +30,7 @@ Route::get('/mainLayout', function () {
 
 
 Route::get('/index', 'HomeController@customIndex');
-
+Route::get('/show-machines-by', 'HomeController@showMachinesBy');
 
 //admin routes
 Route::get('/admin', 'adminController@dashboard')->middleware('adminMiddleware');

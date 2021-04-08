@@ -28,11 +28,15 @@
                         <div class="banner">
                             Featured
                         </div>
-                        <div class="card-image">
-                            <img src="/images/machine-images/1.jpg" alt="">
-                        </div>
+                        <a href="">
+                            <div class="card-image">
+                                <div class="overlay">
+                                </div>
+                                <img src="/images/machine-images/1.jpg" alt="">
+                            </div>
+                        </a>
                         <div class="card-name">
-                            <p> 1300 WAT MAZAK SUPER TURBO X-48 CHAMP CNC LASER</p>
+                            <a href=""> 1300 WAT MAZAK SUPER TURBO X-48 CHAMP CNC LASER</a>
                         </div>
                         <div class="card-desc">
                             <p><span class="left">Manufacturer:</span> Mazak</p>
@@ -49,12 +53,17 @@
                         <div class="banner">
                             Featured
                         </div>
-                        <div class="card-image">
-                            <img src="/images/machine-images/1.jpg" alt="">
-                        </div>
+                        <a href="">
+                            <div class="card-image">
+                                <div class="overlay">
+                                </div>
+                                <img src="/images/machine-images/1.jpg" alt="">
+                            </div>
+                        </a>
                         <div class="card-name">
-                            <p> 1300 WAT MAZAK SUPER TURBO X-48 CHAMP CNC LASER</p>
+                            <a href=""> 1300 WAT MAZAK SUPER TURBO X-48 CHAMP CNC LASER</a>
                         </div>
+
                         <div class="card-desc">
                             <p><span class="left">Manufacturer:</span> Mazak</p>
                             <p><span class="left">Model:</span> Super Turbo X-38</p>
@@ -70,12 +79,17 @@
                         <div class="banner">
                             Featured
                         </div>
-                        <div class="card-image">
-                            <img src="/images/machine-images/1.jpg" alt="">
-                        </div>
+                        <a href="">
+                            <div class="card-image">
+                                <div class="overlay">
+                                </div>
+                                <img src="/images/machine-images/1.jpg" alt="">
+                            </div>
+                        </a>
                         <div class="card-name">
-                            <p> 1300 WAT MAZAK SUPER TURBO X-48 CHAMP CNC LASER</p>
+                            <a href=""> 1300 WAT MAZAK SUPER TURBO X-48 CHAMP CNC LASER</a>
                         </div>
+
                         <div class="card-desc">
                             <p><span class="left">Manufacturer:</span> Mazak</p>
                             <p><span class="left">Model:</span> Super Turbo X-38</p>
@@ -91,11 +105,15 @@
                         <div class="banner">
                             Featured
                         </div>
-                        <div class="card-image">
-                            <img src="/images/machine-images/1.jpg" alt="">
-                        </div>
+                        <a href="">
+                            <div class="card-image">
+                                <div class="overlay">
+                                </div>
+                                <img src="/images/machine-images/1.jpg" alt="">
+                            </div>
+                        </a>
                         <div class="card-name">
-                            <p> 1300 WAT MAZAK SUPER TURBO X-48 CHAMP CNC LASER</p>
+                            <a href=""> 1300 WAT MAZAK SUPER TURBO X-48 CHAMP CNC LASER</a>
                         </div>
                         <div class="card-desc">
                             <p><span class="left">Manufacturer:</span> Mazak</p>
@@ -113,12 +131,17 @@
                         <div class="banner">
                             Featured
                         </div>
-                        <div class="card-image">
-                            <img src="/images/machine-images/1.jpg" alt="">
-                        </div>
+                        <a href="">
+                            <div class="card-image">
+                                <div class="overlay">
+                                </div>
+                                <img src="/images/machine-images/1.jpg" alt="">
+                            </div>
+                        </a>
                         <div class="card-name">
-                            <p> 1300 WAT MAZAK SUPER TURBO X-48 CHAMP CNC LASER</p>
+                            <a href=""> 1300 WAT MAZAK SUPER TURBO X-48 CHAMP CNC LASER</a>
                         </div>
+
                         <div class="card-desc">
                             <p><span class="left">Manufacturer:</span> Mazak</p>
                             <p><span class="left">Model:</span> Super Turbo X-38</p>
@@ -134,12 +157,17 @@
                         <div class="banner">
                             Featured
                         </div>
-                        <div class="card-image">
-                            <img src="/images/machine-images/1.jpg" alt="">
-                        </div>
+                        <a href="">
+                            <div class="card-image">
+                                <div class="overlay">
+                                </div>
+                                <img src="/images/machine-images/1.jpg" alt="">
+                            </div>
+                        </a>
                         <div class="card-name">
-                            <p> 1300 WAT MAZAK SUPER TURBO X-48 CHAMP CNC LASER</p>
+                            <a href=""> 1300 WAT MAZAK SUPER TURBO X-48 CHAMP CNC LASER</a>
                         </div>
+
                         <div class="card-desc">
                             <p><span class="left">Manufacturer:</span> Mazak</p>
                             <p><span class="left">Model:</span> Super Turbo X-38</p>
@@ -155,12 +183,17 @@
                         <div class="banner">
                             Featured
                         </div>
-                        <div class="card-image">
-                            <img src="/images/machine-images/1.jpg" alt="">
-                        </div>
+                        <a href="">
+                            <div class="card-image">
+                                <div class="overlay">
+                                </div>
+                                <img src="/images/machine-images/1.jpg" alt="">
+                            </div>
+                        </a>
                         <div class="card-name">
-                            <p> 1300 WAT MAZAK SUPER TURBO X-48 CHAMP CNC LASER</p>
+                            <a href=""> 1300 WAT MAZAK SUPER TURBO X-48 CHAMP CNC LASER</a>
                         </div>
+
                         <div class="card-desc">
                             <p><span class="left">Manufacturer:</span> Mazak</p>
                             <p><span class="left">Model:</span> Super Turbo X-38</p>
@@ -176,12 +209,17 @@
                         <div class="banner">
                             Featured
                         </div>
-                        <div class="card-image">
-                            <img src="/images/machine-images/1.jpg" alt="">
-                        </div>
+                        <a href="">
+                            <div class="card-image">
+                                <div class="overlay">
+                                </div>
+                                <img src="/images/machine-images/1.jpg" alt="">
+                            </div>
+                        </a>
                         <div class="card-name">
-                            <p> 1300 WAT MAZAK SUPER TURBO X-48 CHAMP CNC LASER</p>
+                            <a href=""> 1300 WAT MAZAK SUPER TURBO X-48 CHAMP CNC LASER</a>
                         </div>
+
                         <div class="card-desc">
                             <p><span class="left">Manufacturer:</span> Mazak</p>
                             <p><span class="left">Model:</span> Super Turbo X-38</p>

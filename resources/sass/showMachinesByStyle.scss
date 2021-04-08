@@ -1,0 +1,48 @@
+.show-machines-by-container {
+    margin-top: 2rem;
+    .col-9 {
+        .show-machine {
+            transition: all 150ms;
+            border-radius: 5px;
+            padding: 0.5rem 0;
+            position: relative;
+            margin-bottom: 1rem;
+            display: flex;
+            &:hover {
+                background-color: whitesmoke;
+                cursor: pointer;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            }
+        }
+        .col-3 {
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .col-6 {
+            .machine-name {
+                color: $mainColor;
+                font-weight: bold;
+                margin-bottom: 0.2rem;
+            }
+            .machine-desc {
+                margin-top: 0.5rem;
+                line-height: 0.5;
+                color: #5c5a75;
+            }
+        }
+        .button-col-3 {
+            position: absolute;
+            bottom: 6px;
+            right: -3.5rem;
+            button {
+                transition: all 150ms;
+                background-color: $mainColor;
+                &:hover {
+                    background-color: $mainColorHover;
+                }
+            }
+        }
+    }
+}
