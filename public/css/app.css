@@ -16238,6 +16238,76 @@ readers do not read off random characters that represent icons */
   padding: 0.1rem 1rem;
   color: white;
 }
+.top-machines .card img {
+  width: 100%;
+}
+.top-machines .card .card-name {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.top-machines .card .card-desc .left {
+  color: #a82f3d;
+  font-weight: bold;
+}
+.top-machines .card .more-button {
+  transition: all 150ms;
+  color: #001729;
+  background-color: #e7e7e7;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: -1rem;
+}
+.top-machines .card .more-button:hover {
+  background-color: #dfdfdf;
+}
+.top-machines .card .request-button {
+  margin-top: 1rem;
+  color: white;
+  background-color: #001729;
+  width: 100%;
+  transition: all 150ms;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+}
+.top-machines .card .request-button:hover {
+  background-color: #031f42;
+}
+
+.index-parallax {
+  background: #001729;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
+.index-parallax input {
+  width: 33.33%;
+  text-align: center;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  border: none;
+  margin-bottom: 1rem;
+}
+.index-parallax .btn {
+  padding: 0.2rem !important;
+}
+
+.center button {
+  color: white;
+  background: #001729;
+  border: none;
+  padding: 0.25rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.center button:hover {
+  background-color: #031f42;
+}
 
 html,
 body {
@@ -16251,7 +16321,6 @@ body {
   font-family: "Open Sans";
   font-size: 14px;
   font-weight: 400;
-  overflow: hidden;
   background-color: #ececec;
   color: #102c58;
 }
@@ -16685,73 +16754,4 @@ main.l-main .page-title {
 
 .sidebar-is-expanded main.l-main {
   padding-left: 220px;
-.top-machines .card img {
-  width: 100%;
-}
-.top-machines .card .card-name {
-  font-weight: bold;
-  text-transform: uppercase;
-}
-.top-machines .card .card-desc .left {
-  color: #a82f3d;
-  font-weight: bold;
-}
-.top-machines .card .more-button {
-  transition: all 150ms;
-  color: #001729;
-  background-color: #e7e7e7;
-  width: 100%;
-  text-align: center;
-  font-weight: bold;
-  border-radius: 4px;
-  border: none;
-  margin-bottom: -1rem;
-}
-.top-machines .card .more-button:hover {
-  background-color: #dfdfdf;
-}
-.top-machines .card .request-button {
-  margin-top: 1rem;
-  color: white;
-  background-color: #001729;
-  width: 100%;
-  transition: all 150ms;
-  text-align: center;
-  font-weight: bold;
-  border-radius: 4px;
-  border: none;
-}
-.top-machines .card .request-button:hover {
-  background-color: #031f42;
-}
-
-.index-parallax {
-  background: #001729;
-  text-align: center;
-  color: white;
-  padding: 2rem;
-}
-.index-parallax input {
-  width: 33.33%;
-  text-align: center;
-  padding: 0.2rem;
-  border-radius: 0.2rem;
-  border: none;
-  margin-bottom: 1rem;
-}
-.index-parallax .btn {
-  padding: 0.2rem !important;
-}
-
-.center button {
-  color: white;
-  background: #001729;
-  border: none;
-  padding: 0.25rem 1rem;
-  margin-bottom: 0.5rem;
-  border-radius: 4px;
-  font-weight: bold;
-}
-.center button:hover {
-  background-color: #031f42;
 }

@@ -35,3 +35,6 @@ Route::get('/index', 'HomeController@customIndex');
 //admin routes
 Route::get('/admin', 'adminController@dashboard')->middleware('adminMiddleware');
 Route::get('/newMachine', 'machineController@newMachine')->middleware('adminMiddleware');
+
+
+Route::get('/categories', 'categoriesController@index');
