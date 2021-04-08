@@ -17,14 +17,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/mainLayout', function () {
     return view('layouts.mainLayout');
 });
 
-Route::get('/index', function () {
-    return view('index');
-});
+
+Route::get('/index', 'HomeController@customIndex');
+
+
+//admin routes
+Route::get('/admin', 'adminController@dashboard')->middleware('adminMiddleware');
+Route::get('/newMachine', 'machineController@newMachine')->middleware('adminMiddleware');
