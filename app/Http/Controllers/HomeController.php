@@ -25,4 +25,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function mainLayout()
+    {
+        return view('mainLayout');
+    }
+
+    public function index()
+    {
+        return view('index');
+    }
 }
