@@ -10,12 +10,12 @@
     </div>
     <div class="brand-bar">
         <div class="container">
-            <img src="/images/brand-logos/apple.png" alt="">
-            <img src="/images/brand-logos/tesla.png" alt="">
-            <img src="/images/brand-logos/apple.png" alt="">
-            <img src="/images/brand-logos/tesla.png" alt="">
-            <img src="/images/brand-logos/apple.png" alt="">
-            <img src="/images/brand-logos/tesla.png" alt="">
+            <img src="/images/brand-logos/codimag.png" alt="" style="height: 3rem;">
+            <img src="/images/brand-logos/mark-andy.png" alt="" style="width: 15rem; height: 2rem;">
+            <img src="/images/brand-logos/mps.png" alt="" style="height: 3rem;">
+            <img src="/images/brand-logos/nilpeter.svg" alt=""
+                style="height: 4rem; margin-left: -2rem; margin-right: -2rem;">
+            <img src="/images/brand-logos/gallus.png" alt="" style="height: 4rem">
         </div>
     </div>
 

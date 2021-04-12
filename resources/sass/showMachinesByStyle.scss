@@ -1,5 +1,40 @@
 .show-machines-by-container {
     margin-top: 2rem;
+    .category-col-3 {
+        border: 1px solid #dddddd;
+        padding: 0rem;
+        i {
+            padding-top: 0.4rem;
+        }
+        .machines-category {
+            border-bottom: 1px solid #dddddd;
+            padding: 1rem;
+        }
+        .machines-brand {
+            padding: 1rem;
+        }
+        .bold {
+            color: $mainColor;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+        }
+        .light {
+            color: gray;
+            padding-left: 1rem;
+        }
+        a {
+            transition: all 150ms;
+            &:hover .light {
+                background-color: #dddddd;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                color: $mainColor;
+            }
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
     .col-9 {
         .show-machine {
             transition: all 150ms;
