@@ -1,0 +1,45 @@
+.imageThumb {
+    max-height: 150px;
+    min-height: 150px;
+    padding: 1px;
+    cursor: pointer;
+}
+.pip {
+    display: inline-block;
+    margin: 10px 10px 10px 10px;
+}
+.remove {
+    display: block;
+    font-size: large;
+    text-align: center;
+    cursor: pointer;
+}
+.remove:hover {
+    color: black;
+}
+
+.custom-file-upload {
+    transition: all 300ms;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.custom-file-upload:hover {
+    background-color: #f8f9fa !important;
+    font-weight: bold;
+}
+.field {
+    background-color: #ebecec;
+    border-radius: 5px;
+}
+
+#file-upload {
+    display: none;
+}

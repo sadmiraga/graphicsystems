@@ -21,6 +21,8 @@ Route::get('/', function () {
 Auth::routes();
 
 
+Route::get('/test', 'adminController@test');
+
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -39,7 +41,11 @@ Route::get('/show-machine', 'HomeController@showMachine');
 Route::middleware(['auth'])->group(function () {
 
     Route::get('/admin', 'adminController@dashboard');
+
+    //machine routes
     Route::get('/new-machine', 'machineController@newMachine');
+    Route::post('/new-machine-exe', 'machineController@newMachineExe');
+
 
     //categories
     Route::get('/categories', 'categoriesController@index');

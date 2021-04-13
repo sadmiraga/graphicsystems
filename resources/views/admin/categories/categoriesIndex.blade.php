@@ -1,6 +1,6 @@
 @extends('layouts.adminLayout')
 
-@section('adminContent')
+@section('content')
 
     @if (session()->has('message'))
         <div class="alert alert-success">

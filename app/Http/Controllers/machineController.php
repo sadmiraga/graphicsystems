@@ -12,4 +12,9 @@ class machineController extends Controller
         $categories = category::all();
         return view('admin.newMachine')->with('categories', $categories);
     }
+
+    public function newMachineExe(Request $request)
+    {
+        return 'haha';
+    }
 }

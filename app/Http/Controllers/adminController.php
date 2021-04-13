@@ -14,4 +14,9 @@ class adminController extends Controller
     {
         return 'admin';
     }
+
+    public function test()
+    {
+        return view('layouts.adminDashboard');
+    }
 }
