@@ -11,6 +11,8 @@
     <!-- Theme style -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+
+    <script src="{{ asset('js/alert.js') }}"></script>
     <script src="{{ asset('js/jquery.js') }}"></script>
     <script src="{{ asset('js/adminlte.js') }}"></script>
 

@@ -50,4 +50,5 @@ Route::middleware(['auth'])->group(function () {
     //categories
     Route::get('/categories', 'categoriesController@index');
     Route::post('/add-category', 'categoriesController@addCategory');
+    Route::get('/deleteCategory/{categoryID}', 'categoriesController@deleteCategory');
 });

@@ -20,4 +20,14 @@ class categoriesController extends Controller
         $category->save();
         return redirect()->back()->with('message', 'You successfully added new category');
     }
+
+    //delete category
+    public function deleteCategory($categoryID)
+    {
+        //find category
+        $category = category::find($categoryID);
+        //delete category
+        $category->delete();
+        return redirect()->back()->with("message", "You successfully deleted category");
+    }
 }
