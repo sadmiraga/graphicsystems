@@ -20,6 +20,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -37,7 +38,7 @@ Route::get('/show-machines-by', 'HomeController@showMachinesBy');
 Route::middleware(['auth'])->group(function () {
 
     Route::get('/admin', 'adminController@dashboard');
-    Route::get('/newMachine', 'machineController@newMachine');
+    Route::get('/new-machine', 'machineController@newMachine');
 
     //categories
     Route::get('/categories', 'categoriesController@index');
