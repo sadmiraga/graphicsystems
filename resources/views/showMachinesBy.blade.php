@@ -3,9 +3,34 @@
     <div class="container show-machines-by-container">
         <h4>List of currently available used machines</h4>
         <div class="row">
-            <div class="col-3">
-                <p>Search by Category</p>
+            <div class="col-3 category-col-3">
+                <div class="machines-category">
+                    <p class="bold">Machine Category <i class="fas fa-angle-down"></i></p>
+                    <a href="#">
+                        <p class="light">Off-set printing machinery</p>
+                    </a>
+                    <a href="#">
+                        <p class="light">Flexo printing machinery</p>
+                    </a>
+                    <a href="#">
+                        <p class="light">3D printing machinery</p>
+                    </a>
+                    <a href="#">
+                        <p class="light">Set printing machinery</p>
+                    </a>
+                    <a href="#">
+                        <p class="light">Bet printing machinery</p>
+                    </a>
+                </div>
 
+                <div class="machines-brand">
+                    <p class="bold">Machine Brand <i class="fas fa-angle-down"></i></p>
+                    <p class="light">Heidelberg</p>
+                    <p class="light">Volkswagen</p>
+                    <p class="light">Audi</p>
+                    <p class="light">Peugot</p>
+                    <p class="light">Ferrari</p>
+                </div>
             </div>
             <div class="col-9">
                 <div class="show-machine">

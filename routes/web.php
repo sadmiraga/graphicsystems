@@ -32,6 +32,7 @@ Route::get('/mainLayout', function () {
 
 Route::get('/index', 'HomeController@customIndex');
 Route::get('/show-machines-by', 'HomeController@showMachinesBy');
+Route::get('/show-machine', 'HomeController@showMachine');
 
 
 
