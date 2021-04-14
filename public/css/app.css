@@ -16140,6 +16140,9 @@ readers do not read off random characters that represent icons */
   top: 0.5rem;
   right: 0.5rem;
 }
+.navbar .navbar-search input {
+  width: 15rem;
+}
 
 .footer {
   background-color: #003854;
@@ -16209,17 +16212,92 @@ readers do not read off random characters that represent icons */
   margin-right: 1rem;
 }
 
-.carousel {
-  background: #eee;
+.contact-dropdown {
+  display: inline-block;
+  /* Dropdown Button */
+  /* Dropdown button on hover & focus */
+  /* The container <div> - needed to position the dropdown content */
+  /* Dropdown Content (Hidden by Default) */
+  /* Links inside the dropdown */
 }
-.carousel .flickity-page-dots {
-  bottom: 15px !important;
+.contact-dropdown .dropbtn:hover {
+  cursor: pointer;
+  color: lightgray;
+}
+.contact-dropdown .dropdown-content {
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  left: 0;
+  width: 100%;
+  top: 3rem;
+  display: none;
+}
+.contact-dropdown .dropdown-content {
+  color: black;
+  padding: 5rem;
+  text-decoration: none;
+}
+.contact-dropdown .container {
+  justify-content: center !important;
+}
+.contact-dropdown .row {
+  text-align: center;
+}
+.contact-dropdown .row .contact-text {
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+.contact-dropdown .row .col-6 {
+  font-size: 5rem;
+  color: #003854;
+  display: flex;
+}
+.contact-dropdown .row .col-6 .wrap {
+  width: 50%;
+  transition: all 300ms;
+  background-color: whitesmoke;
+}
+.contact-dropdown .row .col-6 .wrap:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+.contact-dropdown .row .col-6 p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.contact-dropdown .row .col-6-phone {
+  justify-content: flex-end;
+}
+.contact-dropdown .row .col-6-mail {
+  justify-content: flex-start;
+}
+.contact-dropdown .close-contact {
+  position: absolute;
+  background: black;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  top: 24.5rem;
+  z-index: 3;
+  opacity: 0.3;
+}
+.contact-dropdown .close-contact:hover {
+  cursor: pointer;
 }
 
-.carousel-cell {
+.index .carousel {
+  background: #eee;
+}
+.index .carousel .flickity-page-dots {
+  bottom: 15px !important;
+}
+.index .carousel-cell {
   width: 100%;
   height: 500px;
-  background: #8c8;
   border-radius: 5px;
   counter-increment: carousel-cell;
 }
@@ -16393,9 +16471,10 @@ readers do not read off random characters that represent icons */
   text-decoration: none;
 }
 .show-machines-by-container .col-9 .show-machine {
+  border: 1px solid #dddddd;
   transition: all 150ms;
-  border-radius: 5px;
-  padding: 0.5rem 0;
+  border-radius: 3px;
+  padding: 0.7rem 0;
   position: relative;
   margin-bottom: 1rem;
   display: flex;
@@ -16422,7 +16501,7 @@ readers do not read off random characters that represent icons */
 }
 .show-machines-by-container .col-9 .button-col-3 {
   position: absolute;
-  bottom: 6px;
+  bottom: 0.5rem;
   right: -3.5rem;
 }
 .show-machines-by-container .col-9 .button-col-3 button {
@@ -16433,43 +16512,52 @@ readers do not read off random characters that represent icons */
   background-color: #3490dc;
 }
 
+.modal button {
+  background-color: #337ab7 !important;
+}
+.modal button:hover {
+  background-color: #3490dc !important;
+}
+
 .col-7 {
   overflow: hidden;
 }
 
-.show-machine-carousel-row {
-  /* cell number */
-}
 .show-machine-carousel-row .carousel {
   background: #fafafa;
   margin-bottom: 40px;
 }
+.show-machine-carousel-row .carousel img {
+  width: 100%;
+  height: 100%;
+}
 .show-machine-carousel-row .carousel-cell {
   width: 100%;
-  height: 200px;
   margin-right: 10px;
-  background: #8c8;
   border-radius: 5px;
   counter-increment: carousel-cell;
-}
-.show-machine-carousel-row .carousel-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(carousel-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
 }
 .show-machine-carousel-row .carousel-nav .carousel-cell {
   height: 80px;
   width: 100px;
+}
+.show-machine-carousel-row .carousel-nav {
+  background-color: white;
+  padding: 1rem;
+}
+.show-machine-carousel-row .carousel-nav img {
+  opacity: 0.8;
 }
 .show-machine-carousel-row .carousel-nav .carousel-cell:before {
   font-size: 50px;
   line-height: 80px;
 }
 .show-machine-carousel-row .carousel-nav .carousel-cell.is-nav-selected {
-  background: #ed2;
+  transform: scale(1.1);
+  border: 1px solid gray;
+}
+.show-machine-carousel-row .carousel-nav .carousel-cell.is-nav-selected img {
+  opacity: 1;
 }
 
 #overlay {

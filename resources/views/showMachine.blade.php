@@ -30,21 +30,21 @@
                 <div class="show-machine-sm-desc">
 
                     <div class="show-machine-sm-desc-price">
-                        <p class="show-machine-sm-desc-small-text">Price</p>
-                        <p class="show-machine-sm-desc-text"></p>
+                        <p class="show-machine-sm-desc-small-text">Status</p>
+                        <p class="show-machine-sm-desc-text" style="color: green">Active</p>
                     </div>
                     <div class="show-machine-sm-desc-year">
                         <p class="show-machine-sm-desc-small-text">Year of manufacture</p>
-                        <p class="show-machine-sm-desc-text"></p>
+                        <p class="show-machine-sm-desc-text">1999</p>
                     </div>
                     <div class="show-machine-sm-desc-condition">
                         <p class="show-machine-sm-desc-small-text">Condition</p>
-                        <p class="show-machine-sm-desc-text"></p>
+                        <p class="show-machine-sm-desc-text">Used</p>
                     </div>
                     <div class="show-machine-sm-desc-location">
                         <p class="show-machine-sm-desc-small-text">Location</p>
                         <p style="word-break:break-all;" class="show-machine-sm-desc-text">
-
+                            Far east
                         </p>
                     </div>
                 </div>
@@ -54,9 +54,21 @@
                     <!-- Flickity HTML init -->
                     <div class="carousel carousel-main" data-flickity='{ "contain": true, "pageDots": false}'>
 
-                        <div class="carousel-cell carousel-cell-main"><img alt="" src="/images/machine-images/1.jpg/"
+                        <div class="carousel-cell carousel-cell-main"><img alt="" src="images/machine-images/1.jpg"
                                 height=100%>
                         </div>
+                        <div class="carousel-cell carousel-cell-main"><img alt="" src="images/machine-images/1.jpg"
+                                height=100%>
+                        </div>
+
+                        <div class="carousel-cell carousel-cell-main"><img alt="" src="images/machine-images/1.jpg"
+                                height=100%>
+                        </div>
+
+                        <div class="carousel-cell carousel-cell-main"><img alt="" src="images/machine-images/1.jpg"
+                                height=100%>
+                        </div>
+
 
                         <iframe width="100%" height="543" src="https://www.youtube.com/embed/" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -68,7 +80,11 @@
 
                     <div class="carousel carousel-nav"
                         data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false}'>
-                        <div class="carousel-cell carousel-cell-nav "><img alt="" src="/images/machines/"></div>
+                        <div class="carousel-cell carousel-cell-nav "><img alt="" src="images/machine-images/1.jpg  "></div>
+                        <div class="carousel-cell carousel-cell-nav "><img alt="" src="images/machine-images/1.jpg  "></div>
+                        <div class="carousel-cell carousel-cell-nav "><img alt="" src="images/machine-images/1.jpg  "></div>
+                        <div class="carousel-cell carousel-cell-nav "><img alt="" src="images/machine-images/1.jpg  "></div>
+                        <div class="carousel-cell carousel-cell-nav "><img alt="" src="images/machine-images/1.jpg  "></div>
 
                         <!-- index for video -->
                         <div class="carousel-cell carousel-cell-nav youtubeIcon">
@@ -82,42 +98,85 @@
                     <div class="row" style="padding-top: 0">
                         <div class="col-12 show-machine-col-12">
                             <div class="card">
-                                <h4 class="card-header">SELLER</h4>
+                                <h4 class="card-header">Send Request</h4>
                                 <div class="card-body show-machine-seller">
-                                    <div class="show-machine-seller-desc">
-                                        <a href="#">
-                                            <h5 onclick="location.href='/user-profile/">
-                                            </h5>
-                                        </a>
-                                        <p>Contact person:
+                                    <div class="container">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="first">First Name</label>
+                                                        <input type="text" class="form-control" placeholder="" id="first">
+                                                    </div>
+                                                </div>
+                                                <!--  col-md-6   -->
 
-                                        </p>
-                                        <p>Adress:</p>
-                                        <p>Zipcode:</p>
-                                        <p>City:</p>
-                                        <p>State</p>
-                                        <p>Country:></p>
-                                    </div>
-                                    <div class="col-12 show-machine-seller-desc-box">
-                                        <div class="row show-machine-seller-desc-box-row">
-                                            <div class="col-5 left">Phone:</div>
-                                            <div class="col-7 right">225883</div>
-                                        </div>
-                                        <div class="row show-machine-seller-desc-box-row">
-                                            <div class="col-5 left">Contact person:</div>
-                                            <div class="col-7 right">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="last">Last Name</label>
+                                                        <input type="text" class="form-control" placeholder="" id="last">
+                                                    </div>
+                                                </div>
+                                                <!--  col-md-6   -->
                                             </div>
-                                        </div>
-                                        <div class="row show-machine-seller-desc-box-row">
-                                            <div class="col-5 left">Listing ID:</div>
-                                            <div class="col-7 right"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12"
-                                        style="position: relative;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            min-height: 300px;">
+
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="company">Company</label>
+                                                        <input type="text" class="form-control" placeholder="" id="company">
+                                                    </div>
+
+
+                                                </div>
+                                                <!--  col-md-6   -->
+
+                                                <div class="col-md-6">
+
+                                                    <div class="form-group">
+                                                        <label for="phone">Phone Number</label>
+                                                        <input type="tel" class="form-control" id="phone"
+                                                            placeholder="phone">
+                                                    </div>
+                                                </div>
+                                                <!--  col-md-6   -->
+                                            </div>
+                                            <!--  row   -->
+
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+
+                                                    <div class="form-group">
+                                                        <label for="email">Email address</label>
+                                                        <input type="email" class="form-control" id="email"
+                                                            placeholder="email">
+                                                    </div>
+                                                </div>
+                                                <!--  col-md-6   -->
+
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="url">Your Website</label>
+                                                        <input type="url" class="form-control" id="url" placeholder="url">
+                                                    </div>
+
+                                                </div>
+                                                <!--  col-md-6   -->
+                                            </div>
+                                            <!--  row   -->
+                                            <div class="form-group">
+                                                <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                    rows="10"></textarea>
+                                            </div>
+                                            <div style="text-align: center; margin-bottom: 1rem;">
+                                                <button type="submit" class="btn btn-primary">Send Request</button>
+                                            </div>
+                                        </form>
 
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -127,7 +186,7 @@
                     <div class="row machine-data-row" style="padding-top: 0">
 
                         <div class="col-12">
-                            <div class="card">
+                            <div class="card" style="    margin-top: 4rem;">
                                 <h4 class="card-header">MACHINE DATA</h4>
                                 <div class="card-body">
                                     <div class="show-machine-desc">
@@ -149,55 +208,19 @@
                                         <p class="show-machine-desc-left">Condition:</p>
                                         <p class="show-machine-desc-right"></p>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <h4 class="card-header">PRICE AND LOCATION</h4>
-                                <div class="card-body">
-                                    <div class="show-machine-desc">
-                                        <p class="show-machine-desc-left"> Location:</p>
-                                        <p class="show-machine-desc-right">
-
-
-
-                                        </p>
-                                    </div>
                                     <hr>
-                                    <button class="btn btn-success" type="button" data-toggle="modal"><i
-                                            class="fa fa-envelope" aria-hidden="true" style="padding-right: 5px;"></i>
-                                        Request Price
-                                    </button>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <h4 class="card-header">OFFER DETAILS</h4>
-                                <div class="card-body">
                                     <div class="show-machine-desc">
                                         <p class="show-machine-desc-left"> Listing ID:</p>
                                         <p class="show-machine-desc-right"> </p>
                                     </div>
-
-                                    <hr>
-                                    <div class="show-machine-desc">
-                                        <p class="show-machine-desc-left"> Times seen:</p>
-                                        <p class="show-machine-desc-right"> </p>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="row" style="margin-bottom: 5%;">
                         <div class="col-12">
-                            <div class="card">
+                            <div class="card" style="    margin-top: 1rem;">
                                 <h4 class="card-header">DESCRIPTION</h4>
                                 <div class="card-body">
                                     <div class="show-machine-desc">
@@ -211,10 +234,4 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
 @endsection
