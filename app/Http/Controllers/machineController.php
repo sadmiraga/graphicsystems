@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\category;
 use App\Models\machine;
 use App\models\picture;
+use App\Models\manufacturer;
 
 class machineController extends Controller
 {
@@ -35,8 +36,10 @@ class machineController extends Controller
 
     public function newMachine()
     {
+
         $categories = category::all();
-        return view('admin.machines.newMachine')->with('categories', $categories);
+        $manufacturers = manufacturer::all();
+        return view('admin.machines.newMachine')->with('categories', $categories)->with('manufacturers', $manufacturers);
     }
 
     public function deleteMachine($machineID)
@@ -88,6 +91,7 @@ class machineController extends Controller
 
     public function newMachineExe(Request $request)
     {
+
         //create machine model
         $machine = new machine();
 
@@ -98,12 +102,22 @@ class machineController extends Controller
         $machine->name = $request->input('machineName');
         $machine->price = $request->input('machinePrice');
         $machine->description = $request->input('machineDescription');
-        $machine->manufacturer = $request->input('machineManufacturer');
         $machine->condition = $request->input('condition');
         $machine->year = $request->input('machineYear');
         $machine->model = $request->input('machineModel');
         $machine->machineType = $request->input('machineType');
         $machine->locationNote = $request->input('locationNote');
+
+
+        if ($request->input('customManufacturer') == null) {
+            $machine->manufacturerID = $request->input('manufacturerID');
+        } else {
+            $manufacturer = new manufacturer();
+            $manufacturer->name = $request->input('customManufacturer');
+            $manufacturer->save();
+            $machine->manufacturerID = $manufacturer->id;
+        }
+
 
         //add youtube link
         if ($request->input('youtubeLink') != null) {

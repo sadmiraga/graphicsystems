@@ -19,7 +19,6 @@ class CreateMachinesTable extends Migration
             $table->string('model');
             $table->integer('price');
             $table->text('description');
-            $table->string('manufacturer');
             $table->string('condition');
             $table->integer('year');
             $table->string('machineType');
@@ -38,6 +37,10 @@ class CreateMachinesTable extends Migration
             //user
             $table->unsignedInteger('userID')->unsigned();
             $table->foreign('userID')->references('id')->on('users')->onDelete('cascade');
+
+            //manufacturer
+            $table->unsignedInteger('manufacturerID')->unsigned();
+            $table->foreign('manufacturerID')->references('id')->on('manufacturers')->onDelete('cascade');
 
 
             $table->timestamps();

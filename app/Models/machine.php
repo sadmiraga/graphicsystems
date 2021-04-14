@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class machine extends Model
 {
+    use HasFactory;
 
     public function category()
     {
@@ -23,5 +24,8 @@ class machine extends Model
         return $this->hasMany('App\Models\picture');
     }
 
-    use HasFactory;
+    public function manufacturer()
+    {
+        return $this->hasMany('App\Models\manufacturer');
+    }
 }
