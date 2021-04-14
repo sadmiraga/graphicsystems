@@ -49,6 +49,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('edit-machine/{machineID}', 'machineCOntroller@editMachine');
     Route::post('/edit-machine-exe', 'machineController@editMachineExe');
 
+    //picture routes
+    Route::get('/edit-machine-images/{machineID}', 'pictureController@editMachineImages');
+    Route::post('/addImage', 'pictureController@addImage');
+    Route::get('/deleteImage/{machineID}/{pictureID}', 'pictureController@deleteImage');
+
 
     //categories
     Route::get('/categories', 'categoriesController@index');

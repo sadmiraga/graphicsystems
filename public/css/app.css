@@ -69238,3 +69238,71 @@ a.text-muted:hover {
 #file-upload {
   display: none;
 }
+
+.photo-gallery {
+  color: #313437;
+  background-color: #fff;
+}
+
+.photo-gallery p {
+  color: #7d8285;
+}
+
+.photo-gallery h2 {
+  font-weight: bold;
+  margin-bottom: 40px;
+  padding-top: 40px;
+  color: inherit;
+}
+
+@media (max-width: 767px) {
+  .photo-gallery h2 {
+    margin-bottom: 25px;
+    padding-top: 25px;
+    font-size: 24px;
+  }
+}
+.photo-gallery .intro {
+  font-size: 16px;
+  max-width: 500px;
+  margin: 0 auto 40px;
+}
+
+.photo-gallery .intro p {
+  margin-bottom: 0;
+}
+
+.photo-gallery .photos {
+  padding-bottom: 20px;
+}
+
+.photo-gallery .item {
+  position: relative;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item:hover i {
+  opacity: 1;
+  background-color: black;
+}
+.item i {
+  background-color: rgba(0, 0, 0, 0.596);
+  position: absolute;
+  font-size: 20px;
+  right: 20px;
+  top: 10px;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+.item .img-fluid {
+  width: 100%;
+  /* height: auto; */
+  height: 140px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background: whitesmoke;
+}
