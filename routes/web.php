@@ -45,6 +45,7 @@ Route::middleware(['auth'])->group(function () {
     //machine routes
     Route::get('/new-machine', 'machineController@newMachine');
     Route::post('/new-machine-exe', 'machineController@newMachineExe');
+    Route::get('/my-machines', 'machineController@index');
 
 
     //categories

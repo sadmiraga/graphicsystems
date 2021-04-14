@@ -59,11 +59,7 @@
                     </div>
                 </div>
 
-                <!-- SHOW PRICE -->
-                <div class="form-group form-check mb-0">
-                    <input type="checkbox" class="form-check-input" name="showPrice" value="false" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Don't show price to other delaers</label>
-                </div>
+
 
                 <br>
 
@@ -95,7 +91,7 @@
 
                 <!-- LOcation NOTE -->
                 <div class="form-group">
-                    <textarea required name="machineDescription"
+                    <textarea required name="locationNote"
                         placeholder="Enter Notes about machine. This text will be visible just to you." class="form-control"
                         id="exampleFormControlTextarea1" cols="3" rows="3" style="resize:none;"></textarea>
                 </div>

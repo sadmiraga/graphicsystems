@@ -16,12 +16,18 @@ class CreateMachinesTable extends Migration
         Schema::create('machines', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('type');
             $table->string('model');
             $table->integer('price');
-            $table->string('condition');
             $table->text('description');
+            $table->string('manufacturer');
+            $table->string('condition');
+            $table->integer('year');
+            $table->string('machineType');
             $table->string('locationNote');
+
+            $table->integer('inquiries')->default(0);
+            $table->boolean('sold')->default(false);
+            $table->text('metaTag')->nullable();
 
             $table->string('youtubeLink')->nullable();
 

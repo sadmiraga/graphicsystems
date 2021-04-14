@@ -93,8 +93,8 @@
                         </li>
 
                         <!-- MY MACHINES -->
-                        <li class=" nav-item">
-                            <a href="/listings" class="nav-link">
+                        <li onclick="location.href='/my-machines'" class=" nav-item">
+                            <a href="/my-machines" class="nav-link">
                                 <i class="fas fa-list-alt"></i>
                                 <p>Listings</p>
                             </a>
@@ -131,7 +131,7 @@
         </aside>
 
         <!-- Content Wrapper. Contains page content -->
-        <div class=" content-wrapper iframe-mode" data-widget="iframe" >
+        <div class=" content-wrapper iframe-mode" data-widget="iframe">
 
             @yield('content')
         </div>
