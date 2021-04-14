@@ -2,6 +2,12 @@
 
 @section('content')
 
+    @if (session()->has('message'))
+        <div class="alert alert-success" style="text-align:center;">
+            {{ session()->get('message') }}
+        </div>
+    @endif
+
 
     <div class="album py-5 bg-light">
         <div class="container">
@@ -83,34 +89,34 @@
 
                                         <!-- EDIT -->
                                         <button {{ Popper::pop('Edit Listing') }} title="Edit" type="button"
-                                            onclick="location.href='edit-machine/{{ 1 }}'"
+                                            onclick="location.href='edit-machine/{{ $machine->id }}'"
                                             class="btn btn-icon btn-pill btn-primary"><i class="fa fa-fw fa-edit"></i>
                                         </button>
 
                                         <!-- EDIT IMAGES -->
                                         <button {{ Popper::pop('Edit Listing Images') }} title="Images" type="button"
-                                            onclick="location.href='/edit-machine-images/{{ 1 }}'"
+                                            onclick="location.href='/edit-machine-images/{{ $machine->id }}'"
                                             class="btn btn-icon btn-pill btn-secondary"> <i class="fas fa-images"
                                                 aria-hidden="true"></i>
                                         </button>
 
                                         <!-- SELL -->
                                         <button {{ Popper::pop('Mark as sold') }} title="Share" type="button"
-                                            onclick="location.href='/share/{{ 1 }}'"
+                                            onclick="location.href='/share/{{ $machine->id }}'"
                                             class="btn btn-icon btn-pill btn-success" data-toggle="modal"> <i
                                                 class="fas fa-check-circle"></i>
                                         </button>
 
                                         <!-- DELETE MACHINE -->
                                         <button {{ Popper::pop('Remove Listing') }} title="Remove" type="button"
-                                            onclick="location.href='/deleteMachine/{{ 1 }}'"
+                                            onclick="location.href='/deleteMachine/{{ $machine->id }}'"
                                             class="btn btn-icon btn-pill btn-danger" data-toggle="modal"> <i
                                                 class="fa fa-fw fa-trash"></i>
                                         </button>
 
                                         <!-- SHARE -->
                                         <button {{ Popper::pop('Share on MachineryDepo') }} title="Share" type="button"
-                                            onclick="location.href='/share/{{ 1 }}'"
+                                            onclick="location.href='/share/{{ $machine->id }}'"
                                             class="btn btn-icon btn-pill btn-warning" data-toggle="modal"> <i
                                                 class="far fa-share-square"></i>
                                         </button>
