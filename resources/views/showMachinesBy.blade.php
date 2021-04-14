@@ -47,7 +47,8 @@
                         <p class="machine-desc">Model: Lemanic</p>
                     </div>
                     <div class="col-3 button-col-3">
-                        <button class="btn btn-primary">Send Request</button>
+                        <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Send
+                            Request</button>
                     </div>
                 </div>
                 <hr>
@@ -63,7 +64,8 @@
                         <p class="machine-desc">Model: Lemanic</p>
                     </div>
                     <div class="col-3 button-col-3">
-                        <button class="btn btn-primary">Send Request</button>
+                        <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Send
+                            Request</button>
                     </div>
                 </div>
                 <hr>
@@ -79,10 +81,94 @@
                         <p class="machine-desc">Model: Lemanic</p>
                     </div>
                     <div class="col-3 button-col-3">
-                        <button class="btn btn-primary">Send Request</button>
+                        <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Send
+                            Request</button>
                     </div>
                 </div>
                 <hr>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="container">
+                    <form>
+                        <h2>Send Request</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="first">First Name</label>
+                                    <input type="text" class="form-control" placeholder="" id="first">
+                                </div>
+                            </div>
+                            <!--  col-md-6   -->
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="last">Last Name</label>
+                                    <input type="text" class="form-control" placeholder="" id="last">
+                                </div>
+                            </div>
+                            <!--  col-md-6   -->
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="company">Company</label>
+                                    <input type="text" class="form-control" placeholder="" id="company">
+                                </div>
+
+
+                            </div>
+                            <!--  col-md-6   -->
+
+                            <div class="col-md-6">
+
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="phone">
+                                </div>
+                            </div>
+                            <!--  col-md-6   -->
+                        </div>
+                        <!--  row   -->
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+
+                                <div class="form-group">
+                                    <label for="email">Email address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="email">
+                                </div>
+                            </div>
+                            <!--  col-md-6   -->
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="url">Your Website <small>Please include http://</small></label>
+                                    <input type="url" class="form-control" id="url" placeholder="url">
+                                </div>
+
+                            </div>
+                            <!--  col-md-6   -->
+                        </div>
+                        <!--  row   -->
+                        <div class="form-group">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+                        </div>
+                        <div style="text-align: center; margin-bottom: 1rem;">
+                            <button type="submit" class="btn btn-primary">Send Request</button>
+                        </div>
+                    </form>
+
+                </div>
             </div>
         </div>
     </div>
