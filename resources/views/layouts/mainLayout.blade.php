@@ -40,11 +40,13 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 
 <body>
     <!-- Navbar -->
+
     <div class="navbar">
         <div class="logo">
             <a>Graphic-Systems</a>
@@ -54,8 +56,33 @@
             <a href="">Stocklist</a>
             <a href="">Services</a>
             <a href="">About us</a>
-            <a href="">Contact</a>
-            <a href="">Newsletter</a>
+            <div class="contact-dropdown">
+                <a class="dropbtn">Contact</a>
+                <div id="myDropdown" class="dropdown-content">
+                    <div class="close-contact"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="contact-text">
+                                <h5>How do you like to contact us?</h5>
+                                <p>Our support team is available from Monday to Friday between 09:00 - 17:00h (CET)</p>
+                            </div>
+                            <div class="col-6 col-6-phone">
+                                <div class="wrap">
+                                    <i class="fas fa-phone"></i>
+                                    <p>+49 123 123 123</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-6-mail">
+                                <div class="wrap" onclick="sendEmail();">
+                                    <i class=" fas fa-envelope"></i>
+                                    <p>info@graphic-systems.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="/index/#index-parallax-id">Newsletter</a>
             <a href="">References</a>
             <a href=""><img src="/images/country-icons/uk-flag.png"></a>
         </div>
@@ -141,6 +168,51 @@
     </div>
 
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown menu if the user clicks outside of it
+
+
+        $(document).ready(function() {
+            var clicked = "false";
+            var windowClick = "";
+            $(".dropbtn").click(function() {
+                console.log(clicked);
+                if (clicked == "false") {
+                    $(".dropdown-content").slideDown();
+                    clicked = "true";
+                    $("body").css("overflow", "hidden");
+                } else {
+                    $(".dropdown-content").slideUp();
+                    clicked = "false";
+                    $("body").css("overflow", "scroll");
+                }
+            });
+        });
+
+        $(window).click(function(e) {
+            windowClick = e.target.className;
+
+            if (windowClick == "close-contact") {
+                $(".dropdown-content").slideUp();
+                clicked = "false";
+                console.log(clicked);
+                $("body").css("overflow", "scroll");
+            }
+        });
+
+        function sendEmail() {
+            window.location = "mailto:xyz@abc.com";
+        }
+
+        function callMe() {
+            window.location = "callto:123-456-7890";
+        }
+
+    </script>
 </body>
 
 </html>

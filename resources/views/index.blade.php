@@ -234,7 +234,7 @@
                                 <p><span class="left">Category:</span> Lasers, CNC</p>
                                 <p><span class="left">Year:</span> 2011</p>
                             </div>
-                            <a href=""><button class="more-button">MORE</button></a>
+                            <a href="/#index-parallax-id"><button class="more-button">MORE</button></a>
                             <button class="request-button" data-toggle="modal" data-target=".bd-example-modal-lg">Request
                                 Price</button>
                         </div>
@@ -245,7 +245,7 @@
                 <a href=""><button class="more-offers-button">MORE OFFERS</button></a>
             </div>
         </div>
-        <div class="index-parallax">
+        <div class="index-parallax" id="#index-parallax-id">
             <p style="margin-bottom: -0.5rem; font-size: 1.5rem;"><b>Subscribe to our Newsletter</b></p>
             <p>Make sure you're not missing out on our latest arrivals and offers</p>
             <input type="text" placeholder="your@email.com">

@@ -30,21 +30,21 @@
                 <div class="show-machine-sm-desc">
 
                     <div class="show-machine-sm-desc-price">
-                        <p class="show-machine-sm-desc-small-text">Price</p>
-                        <p class="show-machine-sm-desc-text"></p>
+                        <p class="show-machine-sm-desc-small-text">Status</p>
+                        <p class="show-machine-sm-desc-text" style="color: green">Active</p>
                     </div>
                     <div class="show-machine-sm-desc-year">
                         <p class="show-machine-sm-desc-small-text">Year of manufacture</p>
-                        <p class="show-machine-sm-desc-text"></p>
+                        <p class="show-machine-sm-desc-text">1999</p>
                     </div>
                     <div class="show-machine-sm-desc-condition">
                         <p class="show-machine-sm-desc-small-text">Condition</p>
-                        <p class="show-machine-sm-desc-text"></p>
+                        <p class="show-machine-sm-desc-text">Used</p>
                     </div>
                     <div class="show-machine-sm-desc-location">
                         <p class="show-machine-sm-desc-small-text">Location</p>
                         <p style="word-break:break-all;" class="show-machine-sm-desc-text">
-
+                            Far east
                         </p>
                     </div>
                 </div>
@@ -234,10 +234,4 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
 @endsection
