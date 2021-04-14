@@ -14,7 +14,7 @@ class machineController extends Controller
 
     public function index()
     {
-        $machines = machine::all();
+        $machines = machine::paginate(10);
         return view('admin.machines.myMachinesIndex')->with('machines', $machines);
     }
 

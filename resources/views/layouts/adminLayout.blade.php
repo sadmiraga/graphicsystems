@@ -8,6 +8,8 @@
 
 
 
+
+
     <!-- Theme style -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
@@ -141,6 +143,7 @@
         <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->
+    @include('popper::assets')
 
 </body>
 

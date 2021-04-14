@@ -16634,16 +16634,6 @@ body {
   width: 100%;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Open Sans";
-  font-size: 14px;
-  font-weight: 400;
-  background-color: #ececec;
-  color: #102c58;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -51821,6 +51811,7 @@ body.iframe-mode-fullscreen {
 }
 
 .content-wrapper {
+  padding-top: 5%;
   height: 100%;
 }
 
