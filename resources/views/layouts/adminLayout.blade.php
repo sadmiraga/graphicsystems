@@ -1,169 +1,145 @@
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-
 <!DOCTYPE html>
-<html class=''>
+<html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
 
-    <script src="{{ asset('js/app.js') }}" defer></script>
+
+
+    <!-- Theme style -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <script src="{{ asset('js/alert.js') }}"></script>
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/adminlte.js') }}"></script>
 
-    <script
-        src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'>
-    </script>
-    <script
-        src='//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js'>
-    </script>
-    <script
-        src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js'>
-    </script>
-    <meta charset='UTF-8'>
-    <meta name="robots" content="noindex">
-    <link rel="shortcut icon" type="image/x-icon"
-        href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
-    <link rel="mask-icon" type=""
-        href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg"
-        color="#111" />
-    <link rel="canonical"
-        href="https://codepen.io/jaca90/pen/vZJZMx?depth=everything&order=popularity&page=10&q=statistics&show_forks=false" />
 
-    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'>
-    <link rel='stylesheet prefetch'
-        href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+    <!-- overlayScrollbars -->
 
 </head>
 
-<body>
+<body class="hold-transition sidebar-mini layout-fixed" data-panel-auto-height-mode="height">
+    <div class="wrapper">
 
-    <body class="sidebar-is-reduced">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="index3.html" class="nav-link">Home</a>
+                </li>
 
-        <div class="l-sidebar">
-            <div class="logo">
+            </ul>
 
-
-                <div class="c-header-icon js-hamburger">
-                    <div class="hamburger-toggle">
-                        <span class="bar-top"></span>
-                        <span class="bar-mid"></span>
-                        <span class="bar-bot"></span>
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Navbar Search -->
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <div class="navbar-search-block">
+                        <form class="form-inline">
+                            <div class="input-group input-group-sm">
+                                <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                                    aria-label="Search">
+                                <div class="input-group-append">
+                                    <button class="btn btn-navbar" type="submit">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                    <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
-                </div>
-            </div>
-            <div class="l-sidebar__content">
-                <nav class="c-menu js-menu">
-                    <ul class="u-list">
+                </li>
 
 
-                        <!-- website -->
-                        <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Website">
-                            <div class="c-menu__item__inner"><i class="fa fa-home"></i>
-                                <div class="c-menu-item__title"><span>Website</span></div>
-                            </div>
+
+
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index3.html" class="brand-link">
+
+                <span class="brand-text font-weight-light">Grpahic Systems</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+
+                        <!-- NEW MACHINE -->
+                        <li onclick="location.href='/new-machine'" class="nav-item">
+                            <a href="/new-machine" class="nav-link">
+                                <i class="fas fa-plus-circle"></i>
+                                <p>New Machine</p>
+                            </a>
                         </li>
 
-                        <!-- add machine -->
-                        <li class="c-menu__item has-submenu" data-toggle="tooltip" title="New machine">
-                            <div class="c-menu__item__inner"><i class="fa fa-plus-circle"></i>
-                                <div class="c-menu-item__title"><span>New Machine</span></div>
-                            </div>
+                        <!-- MY MACHINES -->
+                        <li class=" nav-item">
+                            <a href="/listings" class="nav-link">
+                                <i class="fas fa-list-alt"></i>
+                                <p>Listings</p>
+                            </a>
                         </li>
 
-                        <!-- machines -->
-                        <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Listing">
-                            <div class="c-menu__item__inner"><i class="fas fa-list-alt"></i>
-                                <div class="c-menu-item__title"><span>Listings</span></div>
-                            </div>
+                        <!-- SUBSCRIBERS -->
+                        <li class=" nav-item">
+                            <a href="/subscribers" class="nav-link">
+                                <i class="fa fa-users"></i>
+                                <p>Subscribers</p>
+                            </a>
                         </li>
 
-                        <!-- subscribers -->
-                        <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Subscribers">
-                            <div class="c-menu__item__inner"><i class="fa fa-users"></i>
-                                <div class="c-menu-item__title"><span>Subscribers</span></div>
-                            </div>
+                        <!-- NEWSLETTER -->
+                        <li class=" nav-item">
+                            <a href="/newsletter" class="nav-link">
+                                <i class="far fa-newspaper"></i>
+                                <p>Newsletter</p>
+                            </a>
                         </li>
 
-                        <!-- categories -->
-                        <li onclick="location.href='/categories'" class="c-menu__item has-submenu" data-toggle="tooltip"
-                            title="Categories">
-                            <div class="c-menu__item__inner"><i class="fa fa-cogs"></i>
-                                <div class="c-menu-item__title"><span>Categories</span></div>
-                            </div>
+                        <!-- CATEGORIES -->
+                        <li onclick="location.href='/categories'" class=" nav-item">
+                            <a href="/categories" class="nav-link">
+                                <i class="fa fa-cogs"></i>
+                                <p>Categories</p>
+                            </a>
                         </li>
-
                     </ul>
                 </nav>
+                <!-- /.sidebar-menu -->
             </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class=" content-wrapper iframe-mode" data-widget="iframe" data-loading-screen="750">
+
+            @yield('content')
         </div>
-    </body>
-    <main class="l-main">
-        <div class="content-wrapper content-wrapper--with-bg">
-            @yield('adminContent')
-        </div>
-    </main>
-    <script
-        src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'>
-    </script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-    <script src='https://use.fontawesome.com/2188c74ac9.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
-    <script>
-        "use strict";
 
-        var Dashboard = function() {
-            var global = {
-                tooltipOptions: {
-                    placement: "right"
-                },
-                menuClass: ".c-menu"
-            };
 
-            var menuChangeActive = function menuChangeActive(el) {
-                var hasSubmenu = $(el).hasClass("has-submenu");
-                $(global.menuClass + " .is-active").removeClass("is-active");
-                $(el).addClass("is-active");
 
-                // if (hasSubmenu) {
-                // 	$(el).find("ul").slideDown();
-                // }
-            };
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
 
-            var sidebarChangeWidth = function sidebarChangeWidth() {
-                var $menuItemsTitle = $("li .menu-item__title");
-
-                $("body").toggleClass("sidebar-is-reduced sidebar-is-expanded");
-                $(".hamburger-toggle").toggleClass("is-opened");
-
-                if ($("body").hasClass("sidebar-is-expanded")) {
-                    $('[data-toggle="tooltip"]').tooltip("destroy");
-                } else {
-                    $('[data-toggle="tooltip"]').tooltip(global.tooltipOptions);
-                }
-            };
-
-            return {
-                init: function init() {
-                    $(".js-hamburger").on("click", sidebarChangeWidth);
-
-                    $(".js-menu li").on("click", function(e) {
-                        menuChangeActive(e.currentTarget);
-                    });
-
-                    $('[data-toggle="tooltip"]').tooltip(global.tooltipOptions);
-                }
-            };
-        }();
-
-        Dashboard.init();
-        //# sourceURL=pen.js
-
-    </script>
 </body>
 
 </html>
