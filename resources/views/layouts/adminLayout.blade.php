@@ -102,6 +102,14 @@
                             </a>
                         </li>
 
+                        <!-- REFERENCES -->
+                        <li onclick="location.href='/my-references'" class=" nav-item">
+                            <a href="/my-references" class="nav-link">
+                                <i class="fas fa-folder-open"></i>
+                                <p>References</p>
+                            </a>
+                        </li>
+
                         <!-- SUBSCRIBERS -->
                         <li class=" nav-item">
                             <a href="/subscribers" class="nav-link">

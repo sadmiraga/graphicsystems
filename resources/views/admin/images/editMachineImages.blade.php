@@ -1,20 +1,25 @@
 @extends('layouts.adminLayout')
 
 
-
-
 @section('content')
+
+    @if (session()->has('message'))
+        <div class="alert alert-success" style="text-align:center;">
+            {{ session()->get('message') }}
+        </div>
+    @endif
+
+    @if (session()->has('error'))
+        <div class="alert alert-danger" style="text-align:center;">
+            {{ session()->get('error') }}
+        </div>
+    @endif
 
     <div class="col-sm-9">
         <div class="account-settings">
             <div class="card mb-4">
 
-                <!-- error -->
-                @if (session()->has('error'))
-                    <div class="alert alert-danger">
-                        {{ session()->get('error') }}
-                    </div>
-                @endif
+
 
                 <div style="font-size: 20px;" class="card-header bg-light font-weight-bold">
                     Edit/Add New Images ({{ $machine->name }})
@@ -41,17 +46,7 @@
                 </div>
                 <hr>
 
-                <script>
-                    function showLoading() {
-                        document.getElementById("loadingGif").style.visibility = "visible";
-                        document.getElementById("loading-overlay").style.display = "block";
-                    }
 
-                </script>
-
-                <div id="loading-overlay"></div>
-
-                <img id="loadingGif" height="100" width="100" src="/images/logos/machinerydepoGif.gif">
 
                 <div class="form-group" style="text-align: center">
                     {!! Form::open(['url' => '/addImage', 'method' => 'post', 'enctype' => 'multipart/form-data', 'id' => 'machineForm', 'files' => 'false', 'onsubmit' => 'showLoading();']) !!}

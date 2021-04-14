@@ -12,9 +12,24 @@ use App\models\picture;
 class machineController extends Controller
 {
 
+    public function myReferences()
+    {
+        $machines = machine::where('sold', true)->paginate(15);
+        return view('admin.machines.references')->with('machines', $machines);
+    }
+
+    public function sell($machineID)
+    {
+        $machine = machine::findOrFail($machineID);
+        $machine->sold = true;
+        $machine->save();
+
+        return redirect('/my-machines')->with("message", "You successfully sold machine, you can find it under the 'references' ");
+    }
+
     public function index()
     {
-        $machines = machine::paginate(10);
+        $machines = machine::where('sold', false)->paginate(15);
         return view('admin.machines.myMachinesIndex')->with('machines', $machines);
     }
 
@@ -22,6 +37,28 @@ class machineController extends Controller
     {
         $categories = category::all();
         return view('admin.machines.newMachine')->with('categories', $categories);
+    }
+
+    public function deleteMachine($machineID)
+    {
+
+        $machine = machine::findOrFail($machineID);
+
+        //check if user who requested delete is owner of machine
+        if ($machine->userID == Auth::id()) {
+
+            //delete all pictures related to this machine
+            $pictures = picture::where('machineID', $machineID)->get();
+            foreach ($pictures as $picture) {
+                $path = public_path() . '/images/machines/' . $picture->image;
+                unlink($path);
+                $picture->delete();
+            }
+            $machine->delete();
+            return redirect('/my-machines')->with("message", "You successfully deleted listing");
+        } else {
+            return 'not allowed';
+        }
     }
 
     public function editMachine($machineID)

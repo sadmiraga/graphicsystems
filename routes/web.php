@@ -49,11 +49,21 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/my-machines', 'machineController@index');
     Route::get('edit-machine/{machineID}', 'machineCOntroller@editMachine');
     Route::post('/edit-machine-exe', 'machineController@editMachineExe');
+    Route::get('/deleteMachine/{machineID}', 'machineController@deleteMachine');
+
+    Route::get('/sell/{machineID}', 'machineController@sell');
+
+    //references
+    Route::get('/my-references', 'machineController@myReferences');
 
     //picture routes
     Route::get('/edit-machine-images/{machineID}', 'pictureController@editMachineImages');
     Route::post('/addImage', 'pictureController@addImage');
     Route::get('/deleteImage/{machineID}/{pictureID}', 'pictureController@deleteImage');
+
+    //youtube routes
+    Route::post('/updateYoutubeVideo', 'pictureController@updateYoutueVideo');
+    Route::get('/remove-video/{machineID}', 'pictureController@removeVideo');
 
 
     //categories

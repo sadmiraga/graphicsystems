@@ -100,12 +100,7 @@
                                                 aria-hidden="true"></i>
                                         </button>
 
-                                        <!-- SELL -->
-                                        <button {{ Popper::pop('Mark as sold') }} title="Share" type="button"
-                                            onclick="location.href='/sell/{{ $machine->id }}'"
-                                            class="btn btn-icon btn-pill btn-success" data-toggle="modal"> <i
-                                                class="fas fa-check-circle"></i>
-                                        </button>
+
 
                                         <!-- DELETE MACHINE -->
                                         <button {{ Popper::pop('Remove Listing') }} title="Remove" type="button"
@@ -114,12 +109,7 @@
                                                 class="fa fa-fw fa-trash"></i>
                                         </button>
 
-                                        <!-- SHARE -->
-                                        <button {{ Popper::pop('Share on MachineryDepo') }} title="Share" type="button"
-                                            onclick="location.href='/share/{{ $machine->id }}'"
-                                            class="btn btn-icon btn-pill btn-warning" data-toggle="modal"> <i
-                                                class="far fa-share-square"></i>
-                                        </button>
+
 
 
 
