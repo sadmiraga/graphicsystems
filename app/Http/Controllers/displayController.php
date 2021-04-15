@@ -6,9 +6,27 @@ use App\Models\manufacturer;
 use App\Models\machine;
 use App\Models\category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class displayController extends Controller
 {
+
+    public function customIndex()
+    {
+        $machines = machine::join('categories', 'machines.categoryID', '=', 'categories.id')
+            ->join('manufacturers', 'machines.manufacturerID', '=', 'manufacturers.id')
+            ->get('machines.*', 'categories.name', 'manufacturers.name');
+
+
+
+        return $machines;
+
+        $machines = machine::where('sold', false)->orderByDesc('created_at')->take(8)->get();
+        return view('index')->with('machines', $machines);
+    }
+
+
+
     public function showMachinesBy($categoryID, $manufacturerID)
     {
         $manufactures = manufacturer::all();

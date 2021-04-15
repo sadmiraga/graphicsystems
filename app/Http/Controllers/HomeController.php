@@ -36,10 +36,7 @@ class HomeController extends Controller
         return view('mainLayout');
     }
 
-    public function customIndex()
-    {
-        return view('index');
-    }
+
 
 
 

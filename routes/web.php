@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 
 Auth::routes();
@@ -32,7 +30,7 @@ Route::get('/mainLayout', function () {
 });
 
 
-Route::get('/', 'HomeController@customIndex');
+Route::get('/', 'displayController@customIndex');
 Route::get('/stocklist/{categoryID}/{manufacturerID}', 'displayController@showMachinesBy');
 Route::get('/show-machine', 'HomeController@showMachine');
 Route::get('/references', 'HomeController@references');
