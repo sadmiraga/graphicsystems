@@ -81,15 +81,7 @@
                 <a href=""><button class="more-offers-button">MORE OFFERS</button></a>
             </div>
         </div>
-        <div class="index-parallax" id="#index-parallax-id">
-            <p style="margin-bottom: -0.5rem; font-size: 1.5rem;"><b>Subscribe to our Newsletter</b></p>
-            <p>Make sure you're not missing out on our latest arrivals and offers</p>
-            <input type="text" placeholder="your@email.com">
-            <div class="index-parallax-buttons">
-                <button class="btn btn-success">I'm an enduser</button>
-                <button class="btn btn-success">I'm a machine dealer</button>
-            </div>
-        </div>
+
 
         <!-- Modal -->
         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
