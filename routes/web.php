@@ -36,7 +36,7 @@ Route::get('/', 'HomeController@customIndex');
 Route::get('/stocklist/{categoryID}/{manufacturerID}', 'displayController@showMachinesBy');
 Route::get('/show-machine', 'HomeController@showMachine');
 Route::get('/references', 'HomeController@references');
-
+Route::get('/services', 'HomeController@services');
 
 
 Route::middleware(['auth'])->group(function () {
