@@ -115,7 +115,6 @@
 }
 
 .index-parallax {
-    background: $mainColor;
     text-align: center;
     color: white;
     padding: 2rem;
@@ -129,6 +128,11 @@
     }
     .btn {
         padding: 0.2rem !important;
+        background-color: #72aff0 !important;
+        border-color: #72aff0 !important;
+        &:hover {
+            background-color: #5494d3 !important;
+        }
     }
 }
 
