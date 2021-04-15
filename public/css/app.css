@@ -16436,18 +16436,19 @@ readers do not read off random characters that represent icons */
   margin-top: 2rem;
 }
 .show-machines-by-container .category-col-3 {
-  border: 1px solid #dddddd;
   padding: 0rem;
 }
 .show-machines-by-container .category-col-3 i {
   padding-top: 0.4rem;
 }
 .show-machines-by-container .category-col-3 .machines-category {
-  border-bottom: 1px solid #dddddd;
+  border: 1px solid #dddddd;
   padding: 1rem;
+  border-bottom: 0;
 }
 .show-machines-by-container .category-col-3 .machines-brand {
   padding: 1rem;
+  border: 1px solid #dddddd;
 }
 .show-machines-by-container .category-col-3 .bold {
   color: #337ab7;

@@ -1,17 +1,18 @@
 .show-machines-by-container {
     margin-top: 2rem;
     .category-col-3 {
-        border: 1px solid #dddddd;
         padding: 0rem;
         i {
             padding-top: 0.4rem;
         }
         .machines-category {
-            border-bottom: 1px solid #dddddd;
+            border: 1px solid #dddddd;
             padding: 1rem;
+            border-bottom: 0;
         }
         .machines-brand {
             padding: 1rem;
+            border: 1px solid #dddddd;
         }
         .bold {
             color: $mainColor;
