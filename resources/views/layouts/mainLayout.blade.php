@@ -95,71 +95,80 @@
 
 
     <!-- Footer -->
-    <div class="footer">
-        <div class="container footer-container">
-            <div class=" footer">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="footer-logo">
-                            <a>Graphic-Systems</a>
+    <div class="test">
+        <div class="index-parallax" id="#index-parallax-id">
+            <p style="margin-bottom: -0.5rem; font-size: 1.5rem;"><b>Subscribe to our Newsletter</b></p>
+            <p>Make sure you're not missing out on our latest arrivals and offers</p>
+            <input type="text" placeholder="your@email.com">
+            <div class="index-parallax-buttons">
+                <button class="btn btn-success">I'm an enduser</button>
+                <button class="btn btn-success">I'm a machine dealer</button>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container footer-container">
+                <div class=" footer">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="footer-logo">
+                                <a>Graphic-Systems</a>
+                            </div>
+                            <div class="footer-details">
+                                <p class="light">Graphic Systems</p>
+                                <p class="light">Address 123</p>
+                                <p class="light">12345 City</p>
+                                <p class="light">Country</p>
+
+                                <p class="bold" style="margin-top: 2.5rem;">Phone: +49 123 123</p>
+                                <p class="bold">Fax: +49 123 123</p>
+                                <p class="bold" style="margin-top: 1rem;">E-mail: info@graphic-systems.com</p>
+                            </div>
                         </div>
-                        <div class="footer-details">
-                            <p class="light">Graphic Systems</p>
-                            <p class="light">Address 123</p>
-                            <p class="light">12345 City</p>
-                            <p class="light">Country</p>
+                        <div class="col-2">
+                            <p class="bold">Information</p>
 
-                            <p class="bold" style="margin-top: 2.5rem;">Phone: +49 123 123</p>
-                            <p class="bold">Fax: +49 123 123</p>
-                            <p class="bold" style="margin-top: 1rem;">E-mail: info@graphic-systems.com</p>
+                            <a class="light" href="/stocklist/0/0">
+                                <p>Stocklist</p>
+                            </a>
+                            <a class="light" href="">
+                                <p>Services</p>
+                            </a>
+                            <a class="light" href="">
+                                <p>Contact</p>
+                            </a>
+                            <a class="light" href="">
+                                <p>References</p>
+                            </a>
                         </div>
-                    </div>
-                    <div class="col-2">
-                        <p class="bold">Information</p>
+                        <div class="col-2">
+                            <p class="bold">Terms</p>
 
-                        <a class="light" href="/stocklist/0/0">
-                            <p>Stocklist</p>
-                        </a>
-                        <a class="light" href="">
-                            <p>Services</p>
-                        </a>
-                        <a class="light" href="">
-                            <p>Contact</p>
-                        </a>
-                        <a class="light" href="">
-                            <p>References</p>
-                        </a>
-                    </div>
-                    <div class="col-2">
-                        <p class="bold">Terms</p>
-
-                        <a class="light" href="">
-                            <p>Privacy Policy</p>
-                        </a>
-                        <a class="light" href="">
-                            <p>Tech guide</p>
-                        </a>
-                    </div>
-                    <div class="col-4">
-                        <p class="bold" style="margin-top: 1.4rem;">Subscribe to our Newsletter</p>
-                        <input type="text" placeholder="Email Address">
-                        <p class="light" style="color: #356982">We do not share your Information.</p>
+                            <a class="light" href="">
+                                <p>Privacy Policy</p>
+                            </a>
+                            <a class="light" href="">
+                                <p>Tech guide</p>
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <div class="footer-socials">
+                                <i class="fab fa-facebook-f"></i>
+                                <i class="fab fa-twitter"></i>
+                                <i class="fab fa-linkedin-in"></i>
+                                <i class="fab fa-youtube"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="lower-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-desc">
-                        <p class="light" style="color: #659299">2021 Screenshot.dev | ALL RIGHT RESERVED BY
-                            GRAPHIC-SYSTEMS</p>
-                    </div>
-                    <div class="footer-socials">
-                        <i class="fab fa-facebook-f"></i>
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-linkedin-in"></i>
-                        <i class="fab fa-youtube"></i>
+            <div class="lower-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-desc">
+                            <p class="light" style="color: #659299">2021 Screenshot.dev | ALL RIGHT RESERVED BY
+                                GRAPHIC-SYSTEMS</p>
+                        </div>
+
                     </div>
                 </div>
             </div>
