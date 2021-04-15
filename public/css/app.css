@@ -16289,6 +16289,14 @@ readers do not read off random characters that represent icons */
   cursor: pointer;
 }
 
+.alert-success {
+  margin-top: -4.6rem !important;
+}
+
+.alert-error {
+  margin-top: -4.6rem !important;
+}
+
 .index .carousel {
   background: #eee;
 }

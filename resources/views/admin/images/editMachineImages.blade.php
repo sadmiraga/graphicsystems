@@ -15,7 +15,7 @@
         </div>
     @endif
 
-    <div class="col-sm-9">
+    <div class="col-sm-9" style="margin: auto;">
         <div class="account-settings">
             <div class="card mb-4">
 
@@ -27,7 +27,6 @@
 
                 <div class="photo-gallery">
                     <div class="container">
-
                         <div class="row photos">
 
                             @foreach ($pictures as $picture)
@@ -108,7 +107,10 @@
 
 
                 @if ($machine->youtubeLink != null)
-                    <iframe width="70%" height="300px" style="margin:auto;margin-top:1rem;"
+                    <iframe width="70%" height="300px" style="    margin: auto;
+                                                                        margin-top: 1rem;
+                                                                        height: 20rem;
+                                                                        width: 40rem;"
                         src="https://www.youtube.com/embed/{{ $machine->youtubeLink }}" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
