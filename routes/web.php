@@ -33,9 +33,9 @@ Route::get('/mainLayout', function () {
 Route::get('/', 'displayController@customIndex');
 Route::get('/stocklist/{categoryID}/{manufacturerID}', 'displayController@showMachinesBy');
 Route::get('/show-machine/{machineID}', 'displayController@showMachine');
-
 Route::get('/references', 'displayController@references');
 
+Route::get('/search/{query}', 'displayController@search');
 
 Route::get('/services', 'HomeController@services');
 

@@ -16297,6 +16297,10 @@ readers do not read off random characters that represent icons */
   margin-top: -4.6rem !important;
 }
 
+#searchButton:hover {
+  cursor: pointer;
+}
+
 .index .carousel {
   background: #eee;
 }
