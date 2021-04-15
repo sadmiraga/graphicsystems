@@ -39,11 +39,48 @@
                         class="form-control" placeholder="Machine Model">
                 </div>
 
-                <!-- MANUFACTURER -->
-                <div class="form-group">
-                    <input required="required" value="{{ $machine->manufacturer }}" type="text" name="machineManufacturer"
-                        class="form-control" placeholder="Machine Manufacturer">
+                <!-- MANUFACTURERS -->
+                <div class="form-group" id="manufacturerIDWrapper">
+                    <select name="manufacturerID" id="manufacturerID" title="Please select manufacturer"
+                        class="form-control">
+                        <option selected disabled value="-1">Select Manufacturer</option>
+                        @foreach ($manufacturers as $manufacturer)
+                            @if ($machine->manufacturerID == $manufacturer->id)
+                                <option selected value="{{ $manufacturer->id }}"> {{ $manufacturer->name }}</option>
+                            @else
+                                <option value="{{ $manufacturer->id }}"> {{ $manufacturer->name }}</option>
+                            @endif
+
+                        @endforeach
+                        <option value="0">Other</option>
+                    </select>
                 </div>
+
+                <!-- CUSTOM MANUFACTURER -->
+                <div class="form-group" id="customManufacturerWrapper" style="display:none;">
+                    <input type="text" name="customManufacturer" id="customManufacturer" class="form-control"
+                        placeholder="Enter new manufacturer">
+                </div>
+
+                <script>
+                    $(function() {
+                        $("#manufacturerID").on('change', function() {
+
+                            var manufacturerSelect = document.getElementById("manufacturerID").value;
+
+                            if (manufacturerSelect == 0) {
+                                document.getElementById("manufacturerIDWrapper").style.display = "none";
+                                document.getElementById("manufacturerID").value = null;
+                                document.getElementById("customManufacturerWrapper").style.display =
+                                    "block";
+                                document.getElementById("customManufacturer").required = true;
+                            }
+                        })
+
+                    });
+
+                </script>
+
 
                 <!-- TYPE -->
                 <div class="form-group">

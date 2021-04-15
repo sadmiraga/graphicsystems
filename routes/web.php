@@ -33,7 +33,7 @@ Route::get('/mainLayout', function () {
 
 
 Route::get('/', 'HomeController@customIndex');
-Route::get('/show-machines-by', 'HomeController@showMachinesBy');
+Route::get('/stocklist/{categoryID}/{manufacturerID}', 'displayController@showMachinesBy');
 Route::get('/show-machine', 'HomeController@showMachine');
 Route::get('/references', 'HomeController@references');
 
@@ -50,7 +50,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('edit-machine/{machineID}', 'machineCOntroller@editMachine');
     Route::post('/edit-machine-exe', 'machineController@editMachineExe');
     Route::get('/deleteMachine/{machineID}', 'machineController@deleteMachine');
-
     Route::get('/sell/{machineID}', 'machineController@sell');
 
     //references
@@ -64,6 +63,9 @@ Route::middleware(['auth'])->group(function () {
     //youtube routes
     Route::post('/updateYoutubeVideo', 'pictureController@updateYoutueVideo');
     Route::get('/remove-video/{machineID}', 'pictureController@removeVideo');
+
+    //search
+    Route::get('/search-my-machines/{query}', 'searchController@searchMyMachines');
 
 
     //categories
