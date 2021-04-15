@@ -6,21 +6,12 @@
             <div class="col-3 category-col-3">
                 <div class="machines-category">
                     <p class="bold">Machine Category <i class="fas fa-angle-down"></i></p>
-                    <a href="#">
-                        <p class="light">Off-set printing machinery</p>
-                    </a>
-                    <a href="#">
-                        <p class="light">Flexo printing machinery</p>
-                    </a>
-                    <a href="#">
-                        <p class="light">3D printing machinery</p>
-                    </a>
-                    <a href="#">
-                        <p class="light">Set printing machinery</p>
-                    </a>
-                    <a href="#">
-                        <p class="light">Bet printing machinery</p>
-                    </a>
+
+                    @foreach ($categories as $category)
+                        <a href="#">
+                            <p class="light">{{ $category->name }}</p>
+                        </a>
+                    @endforeach
                 </div>
 
                 <div class="machines-brand">

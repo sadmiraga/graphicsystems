@@ -35,7 +35,7 @@ class displayController extends Controller
 
 
 
-        return view('showMachinesBy')->with('categories', $categories)
+        return view('stocklist')->with('categories', $categories)
             ->with('machines', $machines)
             ->with('manufactures', $manufactures);
     }
