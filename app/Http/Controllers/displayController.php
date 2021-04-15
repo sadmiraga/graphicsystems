@@ -29,6 +29,12 @@ class displayController extends Controller
             ->with('manufacturer', $manufacturer);
     }
 
+    public function references()
+    {
+        $machines = machine::where('sold', true)->get();
+        return view('references')->with('machines', $machines);
+    }
+
 
     public function showMachinesBy($categoryID, $manufacturerID)
     {

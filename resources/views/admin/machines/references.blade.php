@@ -45,10 +45,14 @@
                                     <p class="card-text" style="float:right;">{{ $machine->model }}</p>
                                 </div>
 
+                                <?php $manufacturer = DB::table('manufacturers')
+                                ->where('id', $machine->manufacturerID)
+                                ->first(); ?>
+
                                 <!--manufacturer -->
                                 <div style="display:flex;justify-content: space-between;">
                                     <p class="card-text">manufacturer</p>
-                                    <p class="card-text" style="float:right;">{{ $machine->manufacturer }}</p>
+                                    <p class="card-text" style="float:right;">{{ $manufacturer->name }}</p>
                                 </div>
 
                                 <!--type -->

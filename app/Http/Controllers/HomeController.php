@@ -42,10 +42,7 @@ class HomeController extends Controller
 
 
 
-    public function references()
-    {
-        return view('references');
-    }
+
 
     public function services()
     {
