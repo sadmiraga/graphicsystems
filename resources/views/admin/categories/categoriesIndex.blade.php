@@ -9,7 +9,7 @@
     @endif
 
     {!! Form::open(['url' => '/add-category', 'method' => 'post', 'enctype' => 'multipart/form-data']) !!}
-    <div class="card mb-4" style="width: 70%;margin-right:15%;margin-left:15%;">
+    <div class="card mb-4" style="width: 70%;margin-right:15%;margin-left:15%;margin-top: 2rem;">
         <div style="text-align: center;" class="card-header font-weight-bold">
             Add new category
         </div>
@@ -46,7 +46,7 @@
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th class="actions">Actions</th>
+                        <th class="actions" style="display: flex; justify-content: flex-end">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -54,7 +54,7 @@
                         <tr>
                             <td>{{ $category->name }}</td>
 
-                            <td>
+                            <td style="display: flex; justify-content: flex-end">
                                 <a href="/editCategory/{{ $category->id }}" class="btn btn-icon btn-pill btn-primary"
                                     data-toggle="tooltip" title="Edit"><i class="fa fa-fw fa-edit"></i></a>
                                 <a onclick='return confirm("This action will delete all machines and subcategories from {{ $category->name }}. Are you sure you want to continue?")'

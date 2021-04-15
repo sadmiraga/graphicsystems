@@ -36,7 +36,7 @@ Route::get('/index', 'HomeController@customIndex');
 Route::get('/show-machines-by', 'HomeController@showMachinesBy');
 Route::get('/show-machine', 'HomeController@showMachine');
 Route::get('/references', 'HomeController@references');
-
+Route::get('/services', 'HomeController@services');
 
 
 Route::middleware(['auth'])->group(function () {

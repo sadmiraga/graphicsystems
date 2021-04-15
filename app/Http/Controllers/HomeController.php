@@ -55,4 +55,9 @@ class HomeController extends Controller
     {
         return view('references');
     }
+        
+    public function services()
+    {
+        return view('services');
+    }
 }
