@@ -32,7 +32,7 @@ Route::get('/mainLayout', function () {
 });
 
 
-Route::get('/index', 'HomeController@customIndex');
+Route::get('/', 'HomeController@customIndex');
 Route::get('/show-machines-by', 'HomeController@showMachinesBy');
 Route::get('/show-machine', 'HomeController@showMachine');
 Route::get('/references', 'HomeController@references');
@@ -46,9 +46,30 @@ Route::middleware(['auth'])->group(function () {
     //machine routes
     Route::get('/new-machine', 'machineController@newMachine');
     Route::post('/new-machine-exe', 'machineController@newMachineExe');
+    Route::get('/my-machines', 'machineController@index');
+    Route::get('edit-machine/{machineID}', 'machineCOntroller@editMachine');
+    Route::post('/edit-machine-exe', 'machineController@editMachineExe');
+    Route::get('/deleteMachine/{machineID}', 'machineController@deleteMachine');
+
+    Route::get('/sell/{machineID}', 'machineController@sell');
+
+    //references
+    Route::get('/my-references', 'machineController@myReferences');
+
+    //picture routes
+    Route::get('/edit-machine-images/{machineID}', 'pictureController@editMachineImages');
+    Route::post('/addImage', 'pictureController@addImage');
+    Route::get('/deleteImage/{machineID}/{pictureID}', 'pictureController@deleteImage');
+
+    //youtube routes
+    Route::post('/updateYoutubeVideo', 'pictureController@updateYoutueVideo');
+    Route::get('/remove-video/{machineID}', 'pictureController@removeVideo');
 
 
     //categories
     Route::get('/categories', 'categoriesController@index');
     Route::post('/add-category', 'categoriesController@addCategory');
+    Route::get('/deleteCategory/{categoryID}', 'categoriesController@deleteCategory');
+    Route::get('/editCategory/{categoryID}', 'categoriesController@editCategoryIndex');
+    Route::post('/updateCategory', 'categoriesController@editCategoryExe');
 });

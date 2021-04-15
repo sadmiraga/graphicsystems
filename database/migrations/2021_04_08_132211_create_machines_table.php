@@ -16,12 +16,17 @@ class CreateMachinesTable extends Migration
         Schema::create('machines', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('type');
             $table->string('model');
             $table->integer('price');
-            $table->string('condition');
             $table->text('description');
+            $table->string('condition');
+            $table->integer('year');
+            $table->string('machineType');
             $table->string('locationNote');
+
+            $table->integer('inquiries')->default(0);
+            $table->boolean('sold')->default(false);
+            $table->text('metaTag')->nullable();
 
             $table->string('youtubeLink')->nullable();
 
@@ -32,6 +37,10 @@ class CreateMachinesTable extends Migration
             //user
             $table->unsignedInteger('userID')->unsigned();
             $table->foreign('userID')->references('id')->on('users')->onDelete('cascade');
+
+            //manufacturer
+            $table->unsignedInteger('manufacturerID')->unsigned();
+            $table->foreign('manufacturerID')->references('id')->on('manufacturers')->onDelete('cascade');
 
 
             $table->timestamps();

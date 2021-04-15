@@ -37,11 +37,44 @@
                     <input type="text" required name="machineModel" class="form-control" placeholder="Machine Model">
                 </div>
 
-                <!-- MANUFACTURER -->
-                <div class="form-group">
-                    <input required type="text" name="machineManufacturer" class="form-control"
-                        placeholder="Machine Manufacturer">
+                <!-- MANUFACTURERS -->
+                <div class="form-group" id="manufacturerIDWrapper">
+                    <select name="manufacturerID" id="manufacturerID" title="Please select manufacturer"
+                        class="form-control">
+                        <option selected disabled value="-1">Select Manufacturer</option>
+                        @foreach ($manufacturers as $manufacturer)
+                            <option value="{{ $manufacturer->id }}"> {{ $manufacturer->name }}</option>
+                        @endforeach
+                        <option value="0">Other</option>
+                    </select>
                 </div>
+
+                <!-- CUSTOM MANUFACTURER -->
+                <div class="form-group" id="customManufacturerWrapper" style="display:none;">
+                    <input type="text" name="customManufacturer" id="customManufacturer" class="form-control"
+                        placeholder="Enter new manufacturer">
+                </div>
+
+                <script>
+                    $(function() {
+                        $("#manufacturerID").on('change', function() {
+
+                            var manufacturerSelect = document.getElementById("manufacturerID").value;
+
+                            if (manufacturerSelect == 0) {
+                                document.getElementById("manufacturerIDWrapper").style.display = "none";
+                                document.getElementById("manufacturerID").value = null;
+                                document.getElementById("customManufacturerWrapper").style.display =
+                                    "block";
+                                document.getElementById("customManufacturer").required = true;
+                            }
+                        })
+
+                    });
+
+                </script>
+
+
 
                 <!-- TYPE -->
                 <div class="form-group">
@@ -59,11 +92,7 @@
                     </div>
                 </div>
 
-                <!-- SHOW PRICE -->
-                <div class="form-group form-check mb-0">
-                    <input type="checkbox" class="form-check-input" name="showPrice" value="false" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Don't show price to other delaers</label>
-                </div>
+
 
                 <br>
 
@@ -95,7 +124,7 @@
 
                 <!-- LOcation NOTE -->
                 <div class="form-group">
-                    <textarea required name="machineDescription"
+                    <textarea required name="locationNote"
                         placeholder="Enter Notes about machine. This text will be visible just to you." class="form-control"
                         id="exampleFormControlTextarea1" cols="3" rows="3" style="resize:none;"></textarea>
                 </div>

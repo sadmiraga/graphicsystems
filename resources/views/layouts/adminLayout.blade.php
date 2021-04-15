@@ -8,9 +8,13 @@
 
 
 
+
+
     <!-- Theme style -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+
+    <script src="{{ asset('js/alert.js') }}"></script>
     <script src="{{ asset('js/jquery.js') }}"></script>
     <script src="{{ asset('js/adminlte.js') }}"></script>
 
@@ -29,8 +33,8 @@
                 <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="index3.html" class="nav-link">Home</a>
+                <li onclick="location.href='/'" class="nav-item d-none d-sm-inline-block">
+                    <a href="/" class="nav-link">Home</a>
                 </li>
 
             </ul>
@@ -91,10 +95,18 @@
                         </li>
 
                         <!-- MY MACHINES -->
-                        <li class=" nav-item">
-                            <a href="/listings" class="nav-link">
+                        <li onclick="location.href='/my-machines'" class=" nav-item">
+                            <a href="/my-machines" class="nav-link">
                                 <i class="fas fa-list-alt"></i>
                                 <p>Listings</p>
+                            </a>
+                        </li>
+
+                        <!-- REFERENCES -->
+                        <li onclick="location.href='/my-references'" class=" nav-item">
+                            <a href="/my-references" class="nav-link">
+                                <i class="fas fa-folder-open"></i>
+                                <p>References</p>
                             </a>
                         </li>
 
@@ -129,7 +141,7 @@
         </aside>
 
         <!-- Content Wrapper. Contains page content -->
-        <div class=" content-wrapper iframe-mode" data-widget="iframe" data-loading-screen="750">
+        <div class=" content-wrapper iframe-mode" data-widget="iframe">
 
             @yield('content')
         </div>
@@ -139,6 +151,7 @@
         <!-- /.control-sidebar -->
     </div>
     <!-- ./wrapper -->
+    @include('popper::assets')
 
 </body>
 
