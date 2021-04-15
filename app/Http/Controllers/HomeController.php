@@ -40,10 +40,7 @@ class HomeController extends Controller
 
 
 
-    public function showMachine()
-    {
-        return view('showMachine');
-    }
+
 
     public function references()
     {

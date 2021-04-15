@@ -29,10 +29,11 @@ Route::get('/mainLayout', function () {
     return view('layouts.mainLayout');
 });
 
-
+//display routes
 Route::get('/', 'displayController@customIndex');
 Route::get('/stocklist/{categoryID}/{manufacturerID}', 'displayController@showMachinesBy');
-Route::get('/show-machine', 'HomeController@showMachine');
+Route::get('/show-machine/{machineID}', 'displayController@showMachine');
+
 Route::get('/references', 'HomeController@references');
 Route::get('/services', 'HomeController@services');
 

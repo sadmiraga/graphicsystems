@@ -14,16 +14,10 @@
         <div class="container">
             <div class="show-machine-headline">
 
-                <div>
-
-                </div>
-
-                <div>
-
-                </div>
 
 
-                <h3></h3>
+
+                <h3>{{ $machine->name }}</h3>
             </div>
             <hr>
             <div class="row show-machine-sm-desc-row">
@@ -31,67 +25,61 @@
 
                     <div class="show-machine-sm-desc-price">
                         <p class="show-machine-sm-desc-small-text">Status</p>
-                        <p class="show-machine-sm-desc-text" style="color: green">Active</p>
+                        @if ($machine->sold == false)
+                            <p class="show-machine-sm-desc-text" style="color: green">Active</p>
+                        @else
+                            <p class="show-machine-sm-desc-text" style="color: red">Sold</p>
+                        @endif
+
                     </div>
                     <div class="show-machine-sm-desc-year">
                         <p class="show-machine-sm-desc-small-text">Year of manufacture</p>
-                        <p class="show-machine-sm-desc-text">1999</p>
+                        <p class="show-machine-sm-desc-text">{{ $machine->year }}</p>
                     </div>
                     <div class="show-machine-sm-desc-condition">
                         <p class="show-machine-sm-desc-small-text">Condition</p>
-                        <p class="show-machine-sm-desc-text">Used</p>
+                        <p class="show-machine-sm-desc-text">{{ $machine->condition }}</p>
                     </div>
-                    <div class="show-machine-sm-desc-location">
-                        <p class="show-machine-sm-desc-small-text">Location</p>
-                        <p style="word-break:break-all;" class="show-machine-sm-desc-text">
-                            Far east
-                        </p>
-                    </div>
+
                 </div>
             </div>
             <div class="row show-machine-carousel-row">
+
+
+                <!-- images-->
                 <div class="col-7">
                     <!-- Flickity HTML init -->
                     <div class="carousel carousel-main" data-flickity='{ "contain": true, "pageDots": false}'>
 
-                        <div class="carousel-cell carousel-cell-main"><img alt="" src="images/machine-images/1.jpg"
-                                height=100%>
-                        </div>
-                        <div class="carousel-cell carousel-cell-main"><img alt="" src="images/machine-images/1.jpg"
-                                height=100%>
-                        </div>
+                        @foreach ($pictures as $picture)
+                            <div class="carousel-cell carousel-cell-main"><img alt=""
+                                    src="/images/machines/{{ $picture->image }}" height=100%>
+                            </div>
+                        @endforeach
 
-                        <div class="carousel-cell carousel-cell-main"><img alt="" src="images/machine-images/1.jpg"
-                                height=100%>
-                        </div>
-
-                        <div class="carousel-cell carousel-cell-main"><img alt="" src="images/machine-images/1.jpg"
-                                height=100%>
-                        </div>
-
-
-                        <iframe width="100%" height="543" src="https://www.youtube.com/embed/" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-
-
-
+                        @if ($machine->youtubeLink != null)
+                            <iframe width="100%" height="543"
+                                src="https://www.youtube.com/embed/{{ $machine->youtubeLink }}" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        @endif
                     </div>
 
                     <div class="carousel carousel-nav"
                         data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false}'>
-                        <div class="carousel-cell carousel-cell-nav "><img alt="" src="images/machine-images/1.jpg  "></div>
-                        <div class="carousel-cell carousel-cell-nav "><img alt="" src="images/machine-images/1.jpg  "></div>
-                        <div class="carousel-cell carousel-cell-nav "><img alt="" src="images/machine-images/1.jpg  "></div>
-                        <div class="carousel-cell carousel-cell-nav "><img alt="" src="images/machine-images/1.jpg  "></div>
-                        <div class="carousel-cell carousel-cell-nav "><img alt="" src="images/machine-images/1.jpg  "></div>
+
+                        @foreach ($pictures as $picture)
+                            <div class="carousel-cell carousel-cell-nav "><img alt=""
+                                    src="/images/machines/{{ $picture->image }}"></div>
+                        @endforeach
 
                         <!-- index for video -->
-                        <div class="carousel-cell carousel-cell-nav youtubeIcon">
-                            <img src="/images/logos/youtube.png">
-                        </div>
+                        @if ($machine->youtubeLink != null)
+                            <div class="carousel-cell carousel-cell-nav youtubeIcon">
+                                <img src="/images/logos/youtube.png">
+                            </div>
+                        @endif
                     </div>
-
                 </div>
 
                 <div class="col-5 sticky-top show-machine-seller-col-5" style="z-index: 1 !important;">
@@ -191,27 +179,28 @@
                                 <div class="card-body">
                                     <div class="show-machine-desc">
                                         <p class="show-machine-desc-left"> Machine type:</p>
-                                        <p class="show-machine-desc-right"> </p>
+                                        <p class="show-machine-desc-right">{{ $machine->machineType }} </p>
                                     </div>
                                     <hr>
+                                    <?php ?>
                                     <div class="show-machine-desc">
                                         <p class="show-machine-desc-left">Manufacturer:</p>
-                                        <p class="show-machine-desc-right"></p>
+                                        <p class="show-machine-desc-right">{{ $manufacturer->name }}</p>
                                     </div>
                                     <hr>
                                     <div class="show-machine-desc">
                                         <p class="show-machine-desc-left">Model:</p>
-                                        <p class="show-machine-desc-right"></p>
+                                        <p class="show-machine-desc-right">{{ $machine->model }}</p>
                                     </div>
                                     <hr>
                                     <div class="show-machine-desc">
                                         <p class="show-machine-desc-left">Condition:</p>
-                                        <p class="show-machine-desc-right"></p>
+                                        <p class="show-machine-desc-right">{{ $machine->model }}</p>
                                     </div>
                                     <hr>
                                     <div class="show-machine-desc">
                                         <p class="show-machine-desc-left"> Listing ID:</p>
-                                        <p class="show-machine-desc-right"> </p>
+                                        <p class="show-machine-desc-right">{{ $machine->id }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -224,7 +213,9 @@
                                 <h4 class="card-header">DESCRIPTION</h4>
                                 <div class="card-body">
                                     <div class="show-machine-desc">
-                                        <p class="show-machine-desc-right"></p>
+                                        <p class="show-machine-desc-right">
+                                            {!! nl2br(e($machine->description)) !!}
+                                        </p>
                                     </div>
                                 </div>
                             </div>

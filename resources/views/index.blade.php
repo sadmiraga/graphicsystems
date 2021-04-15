@@ -42,17 +42,32 @@
                                         <img src="/images/machines/{{ $picture->image }}" alt="">
                                     </div>
                                 </a>
-                                <div class="card-name">
-                                    <a href=""> 1300 WAT MAZAK SUPER TURBO X-48 CHAMP CNC LASER</a>
+                                <div style="text-align: center;" class="card-name">
+                                    <a href=""> {{ $machine->name }}</a>
                                 </div>
                                 <div class="card-desc">
-                                    <p><span class="left">Name:</span> Mazak</p>
-                                    <p><span class="left">Model:</span> Super Turbo X-38</p>
-                                    <p><span class="left">Manufacturer:</span> Mazak</p>
-                                    <p><span class="left">Category:</span> Lasers, CNC</p>
-                                    <p><span class="left">Year:</span> 2011</p>
+                                    <p><span class="left">Model:</span> {{ $machine->model }}</p>
+
+                                    <!-- manufacturer -->
+                                    <?php
+                                    $manufacturer = DB::table('manufacturers')
+                                    ->where('id', '=', $machine->manufacturerID)
+                                    ->first();
+
+                                    $category = DB::table('categories')
+                                    ->where('id', '=', $machine->categoryID)
+                                    ->first();
+                                    ?>
+
+
+                                    <p><span class="left">Manufacturer:</span> {{ $manufacturer->name }}</p>
+                                    <p><span class="left">Category:</span>{{ $category->name }}</p>
+                                    <p><span class="left">Year:</span> {{ $machine->year }}</p>
                                 </div>
-                                <a href=""><button class="more-button">MORE</button></a>
+
+                                <button onclick="location.href='/show-machine/{{ $machine->id }}'"
+                                    class="more-button">MORE</button>
+
                                 <button class="request-button" data-toggle="modal"
                                     data-target=".bd-example-modal-lg">Request
                                     Price</button>
