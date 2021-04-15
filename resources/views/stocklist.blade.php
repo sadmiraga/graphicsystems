@@ -13,14 +13,52 @@
                         </a>
                     @endforeach
                 </div>
+                <div class="test">
+                    <div class="machines-category">
+                        <p class="bold" data-toggle="collapse" href="#machines-category-collapse" role="button"
+                            aria-expanded="false" aria-controls="machines-category-collapse">Machine Category <i
+                                class="fas fa-angle-down"></i></p>
+                        <div class="collapse multi-collapse" id="machines-category-collapse">
+                            <a href="#">
+                                <p class="light">Off-set printing machinery</p>
+                            </a>
+                            <a href="#">
+                                <p class="light">Flexo printing machinery</p>
+                            </a>
+                            <a href="#">
+                                <p class="light">3D printing machinery</p>
+                            </a>
+                            <a href="#">
+                                <p class="light">Set printing machinery</p>
+                            </a>
+                            <a href="#">
+                                <p class="light">Bet printing machinery</p>
+                            </a>
+                        </div>
+                    </div>
 
-                <div class="machines-brand">
-                    <p class="bold">Machine Brand <i class="fas fa-angle-down"></i></p>
-                    <p class="light">Heidelberg</p>
-                    <p class="light">Volkswagen</p>
-                    <p class="light">Audi</p>
-                    <p class="light">Peugot</p>
-                    <p class="light">Ferrari</p>
+                    <div class="machines-brand">
+                        <p class="bold" data-toggle="collapse" href="#machines-brand-collapse" role="button"
+                            aria-expanded="false" aria-controls="machines-brand-collapse">Machine Brand <i
+                                class="fas fa-angle-down"></i></p>
+                        <div class="collapse" id="machines-brand-collapse">
+                            <a href="">
+                                <p class="light">Heidelberg</p>
+                            </a>
+                            <a href="">
+                                <p class="light">Volkswagen</p>
+                            </a>
+                            <a href="">
+                                <p class="light">Audi</p>
+                            </a>
+                            <a href="">
+                                <p class="light">Peugot</p>
+                            </a>
+                            <a href="">
+                                <p class="light">Ferrari</p>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-9">

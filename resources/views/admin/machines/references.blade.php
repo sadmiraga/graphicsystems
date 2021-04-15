@@ -9,7 +9,7 @@
     @endif
 
 
-    <div class="album py-5 bg-light">
+    <div class="album py-5">
         <div class="container">
 
             <div class="row">
@@ -18,7 +18,7 @@
                 @foreach ($machines as $machine)
                     <!-- machine div -->
                     <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
+                        <div class="card mb-4 shadow-bg">
 
                             <!-- get image -->
                             <?php $picture = DB::table('pictures')

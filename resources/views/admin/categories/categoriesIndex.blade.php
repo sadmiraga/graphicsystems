@@ -9,7 +9,7 @@
     @endif
 
     {!! Form::open(['url' => '/add-category', 'method' => 'post', 'enctype' => 'multipart/form-data']) !!}
-    <div class="card mb-4" style="width: 70%;margin-right:15%;margin-left:15%;margin-top: 2rem;">
+    <div class="card mb-4" style="width: 70%;margin-right:15%;margin-left:15%;">
         <div style="text-align: center;" class="card-header font-weight-bold">
             Add new category
         </div>
