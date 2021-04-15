@@ -68,8 +68,11 @@ class machineController extends Controller
     {
         $machine = machine::findOrFail($machineID);
         $categories = category::all();
+        $manufacturers = manufacturer::all();
 
-        return view('admin.machines.editMachine')->with('categories', $categories)->with('machine', $machine);
+        return view('admin.machines.editMachine')->with('categories', $categories)
+            ->with('machine', $machine)
+            ->with('manufacturers', $manufacturers);
     }
 
     public function editMachineExe(Request $request)
@@ -78,12 +81,23 @@ class machineController extends Controller
         $machine->name = $request->input('machineName');
         $machine->price = $request->input('machinePrice');
         $machine->description = $request->input('machineDescription');
-        $machine->manufacturer = $request->input('machineManufacturer');
         $machine->condition = $request->input('condition');
         $machine->year = $request->input('machineYear');
         $machine->model = $request->input('machineModel');
         $machine->machineType = $request->input('machineType');
         $machine->locationNote = $request->input('locationNote');
+
+
+        //manufacturer
+        if ($request->input('customManufacturer') == null) {
+            $machine->manufacturerID = $request->input('manufacturerID');
+        } else {
+            $manufacturer = new manufacturer();
+            $manufacturer->name = $request->input('customManufacturer');
+            $manufacturer->save();
+            $machine->manufacturerID = $manufacturer->id;
+        }
+
         $machine->save();
 
         return redirect('/my-machines')->with("message", "You successfully updated your listing");
@@ -108,7 +122,7 @@ class machineController extends Controller
         $machine->machineType = $request->input('machineType');
         $machine->locationNote = $request->input('locationNote');
 
-
+        //manufacturer
         if ($request->input('customManufacturer') == null) {
             $machine->manufacturerID = $request->input('manufacturerID');
         } else {

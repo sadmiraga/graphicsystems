@@ -41,28 +41,46 @@
 
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
-                <!-- Navbar Search -->
+
+
+                <!-- SEARCH -->
                 <li class="nav-item">
                     <a class="nav-link" data-widget="navbar-search" href="#" role="button">
                         <i class="fas fa-search"></i>
                     </a>
                     <div class="navbar-search-block">
-                        <form class="form-inline">
-                            <div class="input-group input-group-sm">
-                                <input class="form-control form-control-navbar" type="search" placeholder="Search"
-                                    aria-label="Search">
-                                <div class="input-group-append">
-                                    <button class="btn btn-navbar" type="submit">
-                                        <i class="fas fa-search"></i>
-                                    </button>
-                                    <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                                        <i class="fas fa-times"></i>
-                                    </button>
-                                </div>
+                        <div class="input-group input-group-sm">
+                            <input class="form-control form-control-navbar" id="searchQuery"
+                                type="search your active listings" placeholder="Search" aria-label="Search">
+                            <div class="input-group-append">
+                                <button class="btn btn-navbar" onclick="search();" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                                    <i class="fas fa-times"></i>
+                                </button>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </li>
+
+                <script>
+                    input = document.getElementById("searchQuery");
+                    input.addEventListener("keyup", function(event) {
+                        if (event.keyCode === 13) {
+                            event.preventDefault();
+                            search();
+                        }
+                    });
+
+                    function search() {
+                        var queryInput = document.getElementById("searchQuery");
+                        if (queryInput.value != null && queryInput.value != "") {
+                            window.location.href = "/search-my-machines/" + queryInput.value;
+                        }
+                    }
+
+                </script>
 
 
 

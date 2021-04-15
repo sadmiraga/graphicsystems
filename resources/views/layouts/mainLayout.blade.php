@@ -118,7 +118,7 @@
                     <div class="col-2">
                         <p class="bold">Information</p>
 
-                        <a class="light" href="">
+                        <a class="light" href="/stocklist/0/0">
                             <p>Stocklist</p>
                         </a>
                         <a class="light" href="">
