@@ -52,7 +52,7 @@
         </div>
         <div class="navbar-links">
             <a href="">Categories <i class="fas fa-angle-down"></i></a>
-            <a href="">Stocklist</a>
+            <a href="stocklist/0/0">Stocklist</a>
             <a href="">Services</a>
             <a href="">About us</a>
             <div class="contact-dropdown">
@@ -82,13 +82,34 @@
                 </div>
             </div>
             <a href="/index/#index-parallax-id">Newsletter</a>
-            <a href="">References</a>
+            <a href="/references">References</a>
             <a href=""><img src="/images/country-icons/uk-flag.png"></a>
         </div>
+
+        <!-- search -->
         <div class="navbar-search">
-            <i class="fas fa-search"></i>
-            <input type="text" placeholder="Search..">
+            <i class="fas fa-search" id="searchButton" onclick="search();"></i>
+            <input type="text" id="searchQuery" placeholder="Search..">
         </div>
+
+        <script>
+            input = document.getElementById("searchQuery");
+            input.addEventListener("keyup", function(event) {
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    search();
+                }
+            });
+
+            function search() {
+                var queryInput = document.getElementById("searchQuery");
+                if (queryInput.value != null && queryInput.value != "") {
+                    window.location.href = "/search/" + queryInput.value;
+                }
+            }
+
+        </script>
+
     </div>
 
     @yield('content')
@@ -136,7 +157,7 @@
                             <a class="light" href="">
                                 <p>Contact</p>
                             </a>
-                            <a class="light" href="">
+                            <a class="light" href="/references">
                                 <p>References</p>
                             </a>
                         </div>

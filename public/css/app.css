@@ -16287,12 +16287,11 @@ readers do not read off random characters that represent icons */
   margin-top: -4.6rem !important;
 }
 
-.footer-wrap {
   background: #337ab7;
   background: linear-gradient(180deg, #337ab7 0%, #043042 100%);
+#searchButton:hover {
 }
 
-.index .carousel {
   background: #eee;
 }
 .index .carousel .flickity-page-dots {

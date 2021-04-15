@@ -35,11 +35,34 @@ class displayController extends Controller
         return view('references')->with('machines', $machines);
     }
 
+    public function search($query)
+    {
+        $manufactures = manufacturer::all();
+        $categories = category::all();
+
+        $queryValues = preg_split('/\s+/', $query, -1, PREG_SPLIT_NO_EMPTY);
+
+        $machines = machine::where('sold', false)->where(function ($q) use ($queryValues) {
+            foreach ($queryValues as $value) {
+                $q->orWhere('name', 'like', "%$value%")
+                    ->orWhere('description', 'like', "%$value%")
+                    ->orWhere('model', 'like', "%$value%")
+                    ->orWhere('locationNote', 'like', "%$value%")
+                    ->orWhere('machineType', 'like', "%$value%");
+            }
+        })->paginate(15);
+
+        return view('stocklist')->with('categories', $categories)
+            ->with('machines', $machines)
+            ->with('manufactures', $manufactures);
+    }
 
     public function showMachinesBy($categoryID, $manufacturerID)
     {
         $manufactures = manufacturer::all();
         $categories = category::all();
+
+
 
         //NO CATEGORY and NO MANUFACTURER
         if ($categoryID == 0 and  $manufacturerID == 0) {
@@ -60,10 +83,10 @@ class displayController extends Controller
         }
 
 
-
-
         return view('stocklist')->with('categories', $categories)
             ->with('machines', $machines)
-            ->with('manufactures', $manufactures);
+            ->with('manufactures', $manufactures)
+            ->with('selectedCategoryID', $categoryID)
+            ->with('selectedManufacturerID', $manufacturerID);
     }
 }

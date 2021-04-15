@@ -4,36 +4,45 @@
         <h4>List of currently available used machines</h4>
         <div class="row">
             <div class="col-3 category-col-3">
-                <div class="machines-category">
-                    <p class="bold">Machine Category <i class="fas fa-angle-down"></i></p>
 
-                    @foreach ($categories as $category)
-                        <a href="#">
-                            <p class="light">{{ $category->name }}</p>
-                        </a>
-                    @endforeach
-                </div>
+
+                <script>
+                    var selectedCategoryID = "<?php echo $selectedCategoryID; ?>";
+                    var selectedManufacturerID = "<?php echo $selectedManufacturerID; ?>";
+
+
+
+                    function changeCategory(categoryID) {
+                        selectedCategoryID = categoryID;
+                        reroute();
+                    }
+
+                    function changeManufacturer(manufacturerID) {
+                        selectedManufacturerID = manufacturerID;
+                        reroute();
+                    }
+
+                    function reroute() {
+                        var domain = "http://127.0.0.1:8000/"
+                        var link = "stocklist/" + selectedCategoryID + '/' + selectedManufacturerID;
+                        window.location.replace(domain + link);
+
+                    }
+
+                </script>
+
                 <div class="test">
                     <div class="machines-category">
                         <p class="bold" data-toggle="collapse" href="#machines-category-collapse" role="button"
                             aria-expanded="false" aria-controls="machines-category-collapse">Machine Category <i
                                 class="fas fa-angle-down"></i></p>
                         <div class="collapse multi-collapse" id="machines-category-collapse">
-                            <a href="#">
-                                <p class="light">Off-set printing machinery</p>
-                            </a>
-                            <a href="#">
-                                <p class="light">Flexo printing machinery</p>
-                            </a>
-                            <a href="#">
-                                <p class="light">3D printing machinery</p>
-                            </a>
-                            <a href="#">
-                                <p class="light">Set printing machinery</p>
-                            </a>
-                            <a href="#">
-                                <p class="light">Bet printing machinery</p>
-                            </a>
+                            @foreach ($categories as $category)
+                                <a href="#">
+                                    <p onclick="changeCategory({{ $category->id }});" class="light">
+                                        {{ $category->name }}</p>
+                                </a>
+                            @endforeach
                         </div>
                     </div>
 
@@ -42,79 +51,63 @@
                             aria-expanded="false" aria-controls="machines-brand-collapse">Machine Brand <i
                                 class="fas fa-angle-down"></i></p>
                         <div class="collapse" id="machines-brand-collapse">
-                            <a href="">
-                                <p class="light">Heidelberg</p>
-                            </a>
-                            <a href="">
-                                <p class="light">Volkswagen</p>
-                            </a>
-                            <a href="">
-                                <p class="light">Audi</p>
-                            </a>
-                            <a href="">
-                                <p class="light">Peugot</p>
-                            </a>
-                            <a href="">
-                                <p class="light">Ferrari</p>
-                            </a>
+
+                            @foreach ($manufactures as $manufacturer)
+                                <a href="">
+                                    <p onclick="changeManufacturer({{ $manufacturer->id }});" class="light">
+                                        {{ $manufacturer->name }}</p>
+                                </a>
+                            @endforeach
+
+
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-9">
-                <div class="show-machine">
-                    <div class="col-3">
-                        <a href="">
-                            <img src="/images/machine-images/1.jpg" alt="">
-                        </a>
+
+                @foreach ($machines as $machine)
+                    <div class="show-machine">
+                        <div class="col-3">
+
+                            <?php
+                            $picture = DB::table('pictures')
+                            ->where('machineID', '=', $machine->id)
+                            ->first();
+                            $manufacturer = DB::table('manufacturers')
+                            ->where('id', '=', $machine->manufacturerID)
+                            ->first();
+                            ?>
+
+                            <a href="/show-machine/{{ $machine->id }}">
+                                <img src="/images/machines/{{ $picture->image }}" alt="">
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="/show-machine/{{ $machine->id }}" class="machine-name">{{ $machine->name }}</a>
+                            <P class="machine-desc">Machine ID: {{ $machine->id }}</p>
+                            <p class="machine-desc">Year: {{ $machine->year }}</p>
+
+
+                            <p class="machine-desc">Manufacturer:{{ $manufacturer->name }}</p>
+                            <p class="machine-desc">Model: {{ $machine->model }}</p>
+                        </div>
+                        <div class="col-3 button-col-3">
+                            <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Send
+                                Request</button>
+                        </div>
                     </div>
-                    <div class="col-6">
-                        <a href="" class="machine-name">Bobst Lemanic 67-H DR 67</a>
-                        <P class="machine-desc">Machine ID: 1</p>
-                        <p class="machine-desc">Year: 1</p>
-                        <p class="machine-desc">Manufacturer: Bobst</p>
-                        <p class="machine-desc">Model: Lemanic</p>
-                    </div>
-                    <div class="col-3 button-col-3">
-                        <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Send
-                            Request</button>
-                    </div>
-                </div>
-                <hr>
-                <div class="show-machine">
-                    <div class="col-3">
-                        <img src="/images/machine-images/1.jpg" alt="">
-                    </div>
-                    <div class="col-6">
-                        <a href="" class="machine-name">Bobst Lemanic 67-H DR 67</a>
-                        <P class="machine-desc">Machine ID: 1</p>
-                        <p class="machine-desc">Year: 1</p>
-                        <p class="machine-desc">Manufacturer: Bobst</p>
-                        <p class="machine-desc">Model: Lemanic</p>
-                    </div>
-                    <div class="col-3 button-col-3">
-                        <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Send
-                            Request</button>
-                    </div>
-                </div>
-                <hr>
-                <div class="show-machine">
-                    <div class="col-3">
-                        <img src="/images/machine-images/1.jpg" alt="">
-                    </div>
-                    <div class="col-6">
-                        <a href="" class="machine-name">Bobst Lemanic 67-H DR 67</a>
-                        <P class="machine-desc">Machine ID: 1</p>
-                        <p class="machine-desc">Year: 1</p>
-                        <p class="machine-desc">Manufacturer: Bobst</p>
-                        <p class="machine-desc">Model: Lemanic</p>
-                    </div>
-                    <div class="col-3 button-col-3">
-                        <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Send
-                            Request</button>
+                    <hr>
+                @endforeach
+
+                <!-- pages -->
+                <div class="d-flex">
+                    <div class="mx-auto">
+                        {{ $machines->links('pagination::bootstrap-4') }}
                     </div>
                 </div>
-                <hr>
+
+
             </div>
         </div>
     </div>
