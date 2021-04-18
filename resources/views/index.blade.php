@@ -4,10 +4,9 @@
     <div class="index">
         <div class="carousel" data-flickity='{ "wrapAround": true , "prevNextButtons": false, "autoPlay": 3000}'>
             <div class="carousel-cell"><img src="/images/slideshow/1.jpg" alt=""></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
-            <div class="carousel-cell"></div>
+            <div class="carousel-cell"><img src="/images/slideshow/2.png" alt=""></div>
+            <div class="carousel-cell"><img src="/images/slideshow/3.jpg" alt=""></div>
+            <div class="carousel-cell"><img src="/images/slideshow/4.jpg" alt=""></div>
         </div>
         <div class="brand-bar">
             <div class="container">
