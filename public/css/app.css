@@ -16737,7 +16737,11 @@ html {
   margin-top: -10rem;
 }
 .services-container img {
+  position: relative;
   width: 100%;
+}
+.services-container h3 {
+  text-align: center;
 }
 .services-container .headline {
   text-transform: uppercase;
@@ -16753,7 +16757,7 @@ html {
   text-align: center;
 }
 .services-container .col-6 {
-  margin: 10rem 0px;
+  margin: 5rem 0px;
 }
 .services-container .services-right {
   padding-right: 12rem;
@@ -16769,9 +16773,24 @@ html {
   color: white;
   position: absolute;
   top: 50%;
-  transform: translate(-40%, -50%);
+  transform: translate(-50%, -50%);
   left: 50%;
+}
+
+.about-container .row {
+  padding: 5rem;
+  padding-top: 0rem;
+  text-align: center;
+}
+.about-container .about-services {
+  transition: all 300ms;
   width: 100%;
+  font-size: 4.5rem;
+  color: #337ab7;
+}
+.about-container .about-services:hover {
+  color: #3490dc;
+  text-decoration: none;
 }
 
 html,

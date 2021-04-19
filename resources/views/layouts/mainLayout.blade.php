@@ -53,8 +53,8 @@
         <div class="navbar-links">
             <a href="">Categories <i class="fas fa-angle-down"></i></a>
             <a href="stocklist/{{ 0 }}/{{ 0 }}" target="_parent">Stocklist</a>
-            <a href="">Services</a>
-            <a href="">About us</a>
+            <a href="/services">Services</a>
+            <a href="/about-us">About us</a>
             <div class="contact-dropdown">
                 <a class="dropbtn">Contact</a>
                 <div id="myDropdown" class="dropdown-content">

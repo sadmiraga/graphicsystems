@@ -48,4 +48,8 @@ class HomeController extends Controller
     {
         return view('services');
     }
+    public function about()
+    {
+        return view('about');
+    }
 }

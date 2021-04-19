@@ -1,0 +1,17 @@
+.about-container {
+    .row {
+        padding: 5rem;
+        padding-top: 0rem;
+        text-align: center;
+    }
+    .about-services {
+        transition: all 300ms;
+        width: 100%;
+        font-size: 4.5rem;
+        color: $mainColor;
+        &:hover {
+            color: $mainColorHover;
+            text-decoration: none;
+        }
+    }
+}
