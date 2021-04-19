@@ -36,8 +36,8 @@
                                     ->where('machineID', '=', $machine->id)
                                     ->first(); ?>
                                     <div class="card-image">
-                                        <div class="overlay">
-                                        </div>
+                                        <a href="/show-machine/{{ $machine->id }}" class="overlay">
+                                        </a>
                                         <img src="/images/machines/{{ $picture->image }}" alt="">
                                     </div>
                                 </a>
@@ -60,7 +60,7 @@
 
 
                                     <p><span class="left">Manufacturer:</span> {{ $manufacturer->name }}</p>
-                                    <p><span class="left">Category:</span>{{ $category->name }}</p>
+                                    <p><span class="left">Category:</span> {{ $category->name }}</p>
                                     <p><span class="left">Year:</span> {{ $machine->year }}</p>
                                 </div>
 
@@ -77,7 +77,7 @@
                 </div>
             </div>
             <div class="center" id="newsletter" style="text-align: center">
-                <a href=""><button class="more-offers-button">MORE OFFERS</button></a>
+                <a href="/stocklist/0/0"><button class="more-offers-button">MORE OFFERS</button></a>
             </div>
         </div>
 
