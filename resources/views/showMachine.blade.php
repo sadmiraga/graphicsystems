@@ -52,7 +52,7 @@
                     <div class="carousel carousel-main" data-flickity='{ "contain": true, "pageDots": false}'>
 
                         @foreach ($pictures as $picture)
-                            <div class="carousel-cell carousel-cell-main"><img alt=""
+                            <div class="carousel-cell carousel-cell-main"><img class="carousel-big-img" alt=""
                                     src="/images/machines/{{ $picture->image }}" height=100%>
                             </div>
                         @endforeach

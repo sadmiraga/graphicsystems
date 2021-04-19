@@ -16365,6 +16365,7 @@ html {
 .top-machines .card .card-image .overlay {
   transition: all 300ms;
   position: absolute;
+  top: 0;
   width: 100%;
   height: 100%;
   background: #337ab7;
@@ -16378,8 +16379,11 @@ html {
 .top-machines .card .card-name a {
   color: black;
 }
+.top-machines .card .card-desc {
+  margin-top: 1rem;
+}
 .top-machines .card .card-desc .left {
-  color: #1f8744;
+  color: #272626;
   font-weight: bold;
 }
 .top-machines .card .more-button {
@@ -16539,12 +16543,15 @@ html {
 }
 
 .show-machine-carousel-row .carousel {
+  background-color: gray;
   background: #fafafa;
   margin-bottom: 40px;
 }
-.show-machine-carousel-row .carousel img {
+.show-machine-carousel-row .carousel .carousel-big-img {
   width: 100%;
-  height: 100%;
+  height: 500px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .show-machine-carousel-row .carousel-cell {
   width: 100%;
@@ -16557,11 +16564,18 @@ html {
   width: 100px;
 }
 .show-machine-carousel-row .carousel-nav {
-  background-color: white;
+  background-color: #f8fafc;
   padding: 1rem;
 }
 .show-machine-carousel-row .carousel-nav img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   opacity: 0.8;
+}
+.show-machine-carousel-row .carousel-nav .flickity-button {
+  display: none;
 }
 .show-machine-carousel-row .carousel-nav .carousel-cell:before {
   font-size: 50px;
