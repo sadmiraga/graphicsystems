@@ -53,7 +53,7 @@
         <div class="navbar-links">
             <a href="">Categories <i class="fas fa-angle-down"></i></a>
             <a href="stocklist/0/0">Stocklist</a>
-            <a href="">Services</a>
+            <a href="/services">Services</a>
             <a href="">About us</a>
             <div class="contact-dropdown">
                 <a class="dropbtn">Contact</a>
@@ -81,7 +81,7 @@
                     </div>
                 </div>
             </div>
-            <a href="/index/#index-parallax-id">Newsletter</a>
+            <a href="/#newsletter">Newsletter</a>
             <a href="/references">References</a>
             <a href=""><img src="/images/country-icons/uk-flag.png"></a>
         </div>

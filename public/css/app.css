@@ -16107,6 +16107,10 @@ readers do not read off random characters that represent icons */
   width: auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .navbar {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-bottom: 0.15rem solid white;
@@ -16287,11 +16291,15 @@ readers do not read off random characters that represent icons */
   margin-top: -4.6rem !important;
 }
 
+.footer-wrap {
   background: #337ab7;
   background: linear-gradient(180deg, #337ab7 0%, #043042 100%);
-#searchButton:hover {
+}
+.footer-wrap #searchButton:hover {
+  cursor: pointer;
 }
 
+.index .carousel {
   background: #eee;
 }
 .index .carousel .flickity-page-dots {
