@@ -122,7 +122,7 @@
 
                                         <!-- SHARE -->
                                         <button {{ Popper::pop('Share on MachineryDepo') }} title="Share" type="button"
-                                            onclick="location.href='/share/{{ $machine->id }}'"
+                                            onclick="location.href='/share-machine/{{ $machine->id }}'"
                                             class="btn btn-icon btn-pill btn-warning" data-toggle="modal"> <i
                                                 class="far fa-share-square"></i>
                                         </button>

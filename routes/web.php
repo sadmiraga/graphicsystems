@@ -47,6 +47,10 @@ Route::middleware(['adminMiddleware'])->group(function () {
 
     Route::get('/admin', 'adminController@dashboard');
 
+    //share routes
+    Route::get('/share-machine/{machineID}', 'shareController@shareMachine');
+    Route::post('share-machine-exe', 'shareController@shareMachineExe');
+
     //machine routes
     Route::get('/new-machine', 'machineController@newMachine');
     Route::post('/new-machine-exe', 'machineController@newMachineExe');
