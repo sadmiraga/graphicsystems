@@ -5,8 +5,6 @@
         <div class="row">
             <div class="col-3 category-col-3">
 
-                {{ 'category: ' . $selectedCategoryID }}
-                {{ 'manufacturer: ' . $selectedManufacturerID }}
 
                 <script>
                     var selectedCategoryID = "<?php echo $selectedCategoryID; ?>";
