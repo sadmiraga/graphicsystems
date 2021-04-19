@@ -76,7 +76,7 @@
 
                 </div>
             </div>
-            <div class="center" style="text-align: center">
+            <div class="center" id="newsletter" style="text-align: center">
                 <a href=""><button class="more-offers-button">MORE OFFERS</button></a>
             </div>
         </div>

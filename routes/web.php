@@ -38,7 +38,7 @@ Route::get('/references', 'displayController@references');
 Route::get('/search/{query}', 'displayController@search');
 
 Route::get('/services', 'HomeController@services');
-
+Route::get('/about-us', 'HomeController@about');
 
 Route::get('/newSubscriber/{type}/{email}', 'adminController@newSubscriber');
 
