@@ -129,7 +129,7 @@
                         </li>
 
                         <!-- SUBSCRIBERS -->
-                        <li class=" nav-item">
+                        <li onclick="location.href='/subscribers'" class=" nav-item">
                             <a href="/subscribers" class="nav-link">
                                 <i class="fa fa-users"></i>
                                 <p>Subscribers</p>

@@ -125,7 +125,12 @@
                     </div>
                 @endforeach
 
-
+            </div>
+            <!-- pages -->
+            <div class="d-flex">
+                <div class="mx-auto">
+                    {{ $machines->links('pagination::bootstrap-4') }}
+                </div>
             </div>
         </div>
     </div>

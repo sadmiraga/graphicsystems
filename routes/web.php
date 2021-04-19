@@ -40,7 +40,10 @@ Route::get('/search/{query}', 'displayController@search');
 Route::get('/services', 'HomeController@services');
 
 
-Route::middleware(['auth'])->group(function () {
+Route::get('/newSubscriber/{type}/{email}', 'adminController@newSubscriber');
+
+
+Route::middleware(['adminMiddleware'])->group(function () {
 
     Route::get('/admin', 'adminController@dashboard');
 
@@ -67,6 +70,10 @@ Route::middleware(['auth'])->group(function () {
 
     //search
     Route::get('/search-my-machines/{query}', 'searchController@searchMyMachines');
+
+    //newsletter
+    Route::get('/subscribers', 'adminController@subscribers');
+    Route::get('/delete-subscriber/{subscriberID}', 'adminController@deleteSubscriber');
 
 
     //categories

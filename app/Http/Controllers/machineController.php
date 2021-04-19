@@ -30,7 +30,7 @@ class machineController extends Controller
 
     public function index()
     {
-        $machines = machine::where('sold', false)->paginate(15);
+        $machines = machine::where('sold', false)->paginate(12);
         return view('admin.machines.myMachinesIndex')->with('machines', $machines);
     }
 

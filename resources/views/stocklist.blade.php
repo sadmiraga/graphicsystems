@@ -25,7 +25,7 @@
                     }
 
                     function reroute() {
-                        var domain = "http://127.0.0.1:8000/"
+                        var domain = "http://127.0.0.1:8000/";
                         var link = "stocklist/" + selectedCategoryID + '/' + selectedManufacturerID;
                         window.location.replace(domain + link);
 

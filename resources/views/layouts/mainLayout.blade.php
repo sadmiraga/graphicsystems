@@ -14,6 +14,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/alert.js') }}"></script>
 
 
     <!-- META TAGS -->
@@ -117,15 +118,41 @@
 
     <!-- Footer -->
     <div class="footer-wrap">
+
+
+
+        <!-- NEWSLETTER FORM -->
         <div class="index-parallax" id="#index-parallax-id">
             <p style="margin-bottom: -0.5rem; font-size: 1.5rem;"><b>Subscribe to our Newsletter</b></p>
             <p>Make sure you're not missing out on our latest arrivals and offers</p>
-            <input type="text" placeholder="your@email.com">
+            <input type="email" name="subscriberMail" required="required" id="subscriberMail"
+                placeholder="you@email.com">
             <div class="index-parallax-buttons">
-                <button class="btn btn-success">I'm an enduser</button>
-                <button class="btn btn-success">I'm a machine dealer</button>
+                <button onclick="addSubscriber('enduser');" type="submit" class="btn btn-success">I'm an
+                    enduser</button>
+                <button onclick="addSubscriber('dealer');" type="submit" class="btn btn-success">I'm a machine
+                    dealer</button>
             </div>
         </div>
+
+        @if (session()->has('message'))
+            <div class="alert alert-success" style="text-align:center;">
+                {{ session()->get('message') }}
+            </div>
+        @endif
+
+        <script>
+            function addSubscriber(type) {
+                var inputEmail = document.getElementById("subscriberMail");
+                var domain = "http://127.0.0.1:8000/";
+                var link = 'newSubscriber/' + type + '/' + inputEmail.value;
+                window.location.replace(domain + link);
+            }
+
+        </script>
+
+
+
         <div class="footer">
             <div class="container footer-container">
                 <div class=" footer">
