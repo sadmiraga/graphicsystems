@@ -5,6 +5,8 @@
         <div class="row">
             <div class="col-3 category-col-3">
 
+                {{ 'category: ' . $selectedCategoryID }}
+                {{ 'manufacturer: ' . $selectedManufacturerID }}
 
                 <script>
                     var selectedCategoryID = "<?php echo $selectedCategoryID; ?>";
@@ -53,7 +55,7 @@
                         <div class="collapse" id="machines-brand-collapse">
 
                             @foreach ($manufactures as $manufacturer)
-                                <a href="">
+                                <a href="#">
                                     <p onclick="changeManufacturer({{ $manufacturer->id }});" class="light">
                                         {{ $manufacturer->name }}</p>
                                 </a>

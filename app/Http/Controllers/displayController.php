@@ -39,6 +39,8 @@ class displayController extends Controller
     {
         $manufactures = manufacturer::all();
         $categories = category::all();
+        $selectedCategoryID = 0;
+        $selectedManufacturerID = 0;
 
         $queryValues = preg_split('/\s+/', $query, -1, PREG_SPLIT_NO_EMPTY);
 
@@ -54,7 +56,9 @@ class displayController extends Controller
 
         return view('stocklist')->with('categories', $categories)
             ->with('machines', $machines)
-            ->with('manufactures', $manufactures);
+            ->with('manufactures', $manufactures)
+            ->with('selectedCategoryID', $selectedCategoryID)
+            ->with('selectedManufacturerID', $selectedManufacturerID);
     }
 
     public function showMachinesBy($categoryID, $manufacturerID)
