@@ -136,7 +136,7 @@
                 <!-- CATEGORY -->
                 <div class="form-group">
                     <select required name="categoryID" id="categoryID" title="Please select category" class="form-control">
-                        <option selected disabled value="-1">Select Category</option>
+                        <option selected required="required" disabled value="-1">Select Category</option>
                         @foreach ($categories as $category)
                             <option value="{{ $category->id }}"> {{ $category->name }}</option>
                         @endforeach

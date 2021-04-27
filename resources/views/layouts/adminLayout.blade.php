@@ -137,7 +137,7 @@
                         </li>
 
                         <!-- NEWSLETTER -->
-                        <li class=" nav-item">
+                        <li onclick="location.href='/newsletter'" class=" nav-item">
                             <a href="/newsletter" class="nav-link">
                                 <i class="far fa-newspaper"></i>
                                 <p>Newsletter</p>
