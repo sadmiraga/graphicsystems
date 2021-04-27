@@ -42,6 +42,8 @@ Route::get('/about-us', 'HomeController@about');
 
 Route::get('/newSubscriber/{type}/{email}', 'adminController@newSubscriber');
 
+Route::post('/send-machine-inquiry', 'shareController@sendMachineInquiry');
+
 
 Route::middleware(['adminMiddleware'])->group(function () {
 
@@ -50,6 +52,8 @@ Route::middleware(['adminMiddleware'])->group(function () {
     //share routes
     Route::get('/share-machine/{machineID}', 'shareController@shareMachine');
     Route::post('share-machine-exe', 'shareController@shareMachineExe');
+    Route::get('/newsletter', 'shareController@newsletter');
+    Route::post('/send-newsletter', 'shareController@sendNewsletter');
 
     //machine routes
     Route::get('/new-machine', 'machineController@newMachine');

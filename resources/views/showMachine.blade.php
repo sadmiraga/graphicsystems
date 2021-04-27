@@ -82,86 +82,95 @@
                     </div>
                 </div>
 
+
+                <!-- REQUEST -->
+
                 <div class="col-5 sticky-top show-machine-seller-col-5" style="z-index: 1 !important;">
+                    {!! Form::open(['url' => '/send-machine-inquiry', 'method' => 'post', 'enctype' => 'multipart/form-data']) !!}
                     <div class="row" style="padding-top: 0">
                         <div class="col-12 show-machine-col-12">
                             <div class="card">
                                 <h4 class="card-header">Send Request</h4>
                                 <div class="card-body show-machine-seller">
                                     <div class="container">
-                                        <form>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="first">First Name</label>
-                                                        <input type="text" class="form-control" placeholder="" id="first">
-                                                    </div>
-                                                </div>
-                                                <!--  col-md-6   -->
 
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="last">Last Name</label>
-                                                        <input type="text" class="form-control" placeholder="" id="last">
-                                                    </div>
+                                        <input type="hidden" name="machineID" value="{{ $machine->id }}">
+
+                                        <div class="row">
+                                            <!-- First Name -->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="first">First Name</label>
+                                                    <input type="text" name="firstName" class="form-control" placeholder=""
+                                                        id="first">
                                                 </div>
-                                                <!--  col-md-6   -->
+                                            </div>
+
+                                            <!--  Last Name   -->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="last">Last Name</label>
+                                                    <input type="text" name="lastName" class="form-control" placeholder=""
+                                                        id="last">
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row">
+
+                                            <!-- company -->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="company">Company</label>
+                                                    <input type="text" name="companyName" class="form-control"
+                                                        placeholder="" id="company">
+                                                </div>
                                             </div>
 
 
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="company">Company</label>
-                                                        <input type="text" class="form-control" placeholder="" id="company">
-                                                    </div>
-
-
+                                            <div class="col-md-6">
+                                                <!--  Phone Number  -->
+                                                <div class="form-group">
+                                                    <label for="phone">Phone Number</label>
+                                                    <input type="tel" name="phone" class="form-control" id="phone"
+                                                        placeholder="phone">
                                                 </div>
-                                                <!--  col-md-6   -->
+                                            </div>
+                                        </div>
 
-                                                <div class="col-md-6">
 
-                                                    <div class="form-group">
-                                                        <label for="phone">Phone Number</label>
-                                                        <input type="tel" class="form-control" id="phone"
-                                                            placeholder="phone">
-                                                    </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <!-- email address -->
+                                                <div class="form-group">
+                                                    <label for="email">Email address</label>
+                                                    <input type="email" name="email" required="required"
+                                                        class="form-control" id="email" placeholder="email">
                                                 </div>
-                                                <!--  col-md-6   -->
                                             </div>
-                                            <!--  row   -->
 
 
-                                            <div class="row">
-                                                <div class="col-md-6">
-
-                                                    <div class="form-group">
-                                                        <label for="email">Email address</label>
-                                                        <input type="email" class="form-control" id="email"
-                                                            placeholder="email">
-                                                    </div>
+                                            <!--  Website   -->
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="url">Your Website</label>
+                                                    <input type="text" name="website" class="form-control" id="url"
+                                                        placeholder="url">
                                                 </div>
-                                                <!--  col-md-6   -->
+                                            </div>
+                                        </div>
 
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="url">Your Website</label>
-                                                        <input type="url" class="form-control" id="url" placeholder="url">
-                                                    </div>
 
-                                                </div>
-                                                <!--  col-md-6   -->
-                                            </div>
-                                            <!--  row   -->
-                                            <div class="form-group">
-                                                <textarea class="form-control" id="exampleFormControlTextarea1"
-                                                    rows="10"></textarea>
-                                            </div>
-                                            <div style="text-align: center; margin-bottom: 1rem;">
-                                                <button type="submit" class="btn btn-primary">Send Request</button>
-                                            </div>
-                                        </form>
+                                        <div class="form-group">
+                                            <textarea name="userMessage" class="form-control"
+                                                id="exampleFormControlTextarea1" rows="10"></textarea>
+                                        </div>
+
+                                        <div style="text-align: center; margin-bottom: 1rem;">
+                                            <button type="submit" class="btn btn-primary">Send Request</button>
+                                        </div>
+
 
                                     </div>
 
@@ -170,6 +179,12 @@
                         </div>
                     </div>
                 </div>
+                {!! Form::close() !!}
+                <!-- end of REQUEST -->
+
+
+
+
                 <div class="col-7" style="margin-top: -5rem !important">
                     <div class="row machine-data-row" style="padding-top: 0">
 
