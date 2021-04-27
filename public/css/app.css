@@ -16131,6 +16131,24 @@ html {
 .navbar a img {
   height: 1rem;
 }
+.navbar .navbar-links {
+  position: relative;
+}
+.navbar .dropdown-menu {
+  left: 1rem;
+  top: 1.9rem;
+  padding: 1rem 2rem;
+  width: 30rem;
+  background-color: whitesmoke;
+}
+.navbar .dropdown-link {
+  color: black;
+  width: 50%;
+}
+.navbar .dropdown-link:hover {
+  font-weight: bold;
+  color: black;
+}
 .navbar .logo {
   position: absolute;
   left: 1rem;
@@ -16226,7 +16244,7 @@ html {
   z-index: 2;
   left: 0;
   width: 100%;
-  top: 3rem;
+  top: 2.3rem;
   display: none;
 }
 .contact-dropdown .dropdown-content {

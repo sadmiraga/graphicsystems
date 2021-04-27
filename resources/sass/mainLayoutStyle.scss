@@ -20,6 +20,24 @@ html {
             height: 1rem;
         }
     }
+    .navbar-links {
+        position: relative;
+    }
+    .dropdown-menu {
+        left: 1rem;
+        top: 1.9rem;
+        padding: 1rem 2rem;
+        width: 30rem;
+        background-color: whitesmoke;
+    }
+    .dropdown-link {
+        color: black;
+        width: 50%;
+        &:hover {
+            font-weight: bold;
+            color: black;
+        }
+    }
     .logo {
         position: absolute;
         left: 1rem;
@@ -116,7 +134,7 @@ html {
         z-index: 2;
         left: 0;
         width: 100%;
-        top: 3rem;
+        top: 2.3rem;
         display: none;
     }
 

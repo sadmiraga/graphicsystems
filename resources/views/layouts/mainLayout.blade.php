@@ -52,7 +52,19 @@
             <a>Graphic-Systems</a>
         </div>
         <div class="navbar-links">
-            <a href="">Categories <i class="fas fa-angle-down"></i></a>
+            <a class="dropdown">
+                <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Categories
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <div class="row">
+                        <a class="dropdown-link" href="#">Action</a>
+                        <a class="dropdown-link" href="#">Another action</a>
+                        <a class="dropdown-link" href="#">Something else here</a>
+                    </div>
+                </div>
+            </a>
             <a href="#" onclick="location.href='/stocklist/0/0'" id="ovaj">Stocklist</a>
             <a href="/services">Services</a>
             <a href="/about-us">About us</a>
@@ -64,7 +76,8 @@
                         <div class="row">
                             <div class="contact-text">
                                 <h5>How do you like to contact us?</h5>
-                                <p>Our support team is available from Monday to Friday between 09:00 - 17:00h (CET)</p>
+                                <p>Our support team is available from Monday to Friday between 09:00 - 17:00h (CET)
+                                </p>
                             </div>
                             <div class="col-6 col-6-phone">
                                 <div class="wrap">
@@ -84,7 +97,6 @@
             </div>
             <a href="/#newsletter">Newsletter</a>
             <a href="/references">References</a>
-            <a href=""><img src="/images/country-icons/uk-flag.png"></a>
         </div>
 
         <!-- search -->
@@ -193,9 +205,6 @@
 
                             <a class="light" href="">
                                 <p>Privacy Policy</p>
-                            </a>
-                            <a class="light" href="">
-                                <p>Tech guide</p>
                             </a>
                         </div>
                         <div class="col-4">
